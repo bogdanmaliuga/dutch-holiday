@@ -5842,30 +5842,90 @@ button.close {
 .navbar-default {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
-  .navbar-default .navbar-nav li a {
-    padding: 39.5px 0;
-    padding-left: 35px;
-    color: #242424;
-    font-family: 'Lato';
-    font-size: 18px;
-    font-weight: 300;
-    line-height: 22px; }
-    .navbar-default .navbar-nav li a:after {
-      content: '';
-      display: block;
-      width: 100%;
-      background-color: white;
-      margin-top: 4px;
-      height: 1px;
-      visibility: hidden;
-      -webkit-transform: scaleX(0);
-      transform: scaleX(0);
-      -webkit-transition: all 0.2s ease-in-out 0s;
-      transition: all 0.2s ease-in-out 0s; }
-    .navbar-default .navbar-nav li a:hover {
-      color: #ed7a27; }
-      .navbar-default .navbar-nav li a:hover:after {
-        background-color: #ed7a27;
-        visibility: visible;
-        -webkit-transform: scaleX(1);
-        transform: scaleX(1); }
+  .navbar-default .navbar-nav {
+    margin-top: 23px;
+    margin-bottom: 23px; }
+    .navbar-default .navbar-nav li.dropdown > a .fa {
+      padding-left: 9px; }
+    .navbar-default .navbar-nav li.dropdown.open > a {
+      border-top-right-radius: 4px;
+      border-top-left-radius: 4px;
+      background: #006099;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #006099 0%, #0e68a3 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, bootom, top, color-stop(0%, #006099), color-stop(100%, #0e68a3));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #006099 0%, #0e68a3 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #006099 0%, #0e68a3 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #006099 0%, #0e68a3 100%);
+      /* IE10+ */
+      background: linear-gradient(to top, #006099 0%, #0e68a3 100%);
+      /* W3C */
+      color: white;
+      padding-left: 18px;
+      padding-right: 18px; }
+      .navbar-default .navbar-nav li.dropdown.open > a:after {
+        background-color: transparent; }
+      .navbar-default .navbar-nav li.dropdown.open > a:hover:after {
+        background-color: transparent; }
+      .navbar-default .navbar-nav li.dropdown.open > a .fa {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        transform: rotate(180deg);
+        transition: transform 0.3s; }
+    .navbar-default .navbar-nav li.dropdown.open ul.dropdown-menu {
+      background: #063f76;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #063f76 0%, #006099 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, bootom, top, color-stop(0%, #063f76), color-stop(100%, #006099));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #063f76 0%, #006099 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #063f76 0%, #006099 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #063f76 0%, #006099 100%);
+      /* IE10+ */
+      background: linear-gradient(to top, #063f76 0%, #006099 100%);
+      /* W3C */
+      border: 0;
+      left: 0;
+      right: auto;
+      border-top-right-radius: 4px; }
+      .navbar-default .navbar-nav li.dropdown.open ul.dropdown-menu li a {
+        color: white; }
+        .navbar-default .navbar-nav li.dropdown.open ul.dropdown-menu li a:hover {
+          background-color: transparent; }
+    .navbar-default .navbar-nav li a {
+      padding: 14px 18px 17px 18px;
+      color: #242424;
+      font-family: 'Lato';
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 22px; }
+      .navbar-default .navbar-nav li a:after {
+        content: '';
+        display: block;
+        width: 100%;
+        background-color: white;
+        margin-top: 4px;
+        height: 1px;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.2s ease-in-out 0s;
+        transition: all 0.2s ease-in-out 0s; }
+      .navbar-default .navbar-nav li a:hover {
+        color: #ed7a27; }
+        .navbar-default .navbar-nav li a:hover:after {
+          background-color: #ed7a27;
+          visibility: visible;
+          -webkit-transform: scaleX(1);
+          transform: scaleX(1); }
+    .navbar-default .navbar-nav li:last-child a {
+      padding-right: 0; }

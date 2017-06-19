@@ -1,5 +1,31 @@
 @import "bootstrap";
 @import url( 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+@mixin linearGradient($top, $bottom) {
+  background: $top;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, $top 0%, $bottom 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, bootom,top, color-stop(0%, $top), color-stop(100%, $bottom));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, $top 0%, $bottom 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, $top 0%, $bottom 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, $top 0%, $bottom 100%);
+  /* IE10+ */
+  background: linear-gradient(to top, $top 0%, $bottom 100%);
+  /* W3C */
+}
+
+@mixin rotate($deegre)  {
+  -webkit-transform: rotate($deegre);
+    -moz-transform: rotate($deegre);
+    -o-transform: rotate($deegre);
+    -ms-transform: rotate($deegre);
+    transform: rotate($deegre);
+    transition: transform 0.3s;
+
+}
 
 .no-padding > [class*='col-'] {
   padding-right: 0;
@@ -38,17 +64,72 @@
 .navbar-default {
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
   .navbar-nav {
+    margin-top: 23px;
+    margin-bottom: 23px;
+
+    li.dropdown {
+      > a {
+        .fa {
+          padding-left: 9px;
+        }
+      }
+    }
+
+    li.dropdown.open {
+      > a {
+        // color: white !important;
+        border-top-right-radius: 4px;
+        border-top-left-radius: 4px;
+        @include linearGradient(#006099, #0e68a3);
+        color: white;
+        padding-left: 18px;
+        padding-right: 18px;
+        &:after{
+          background-color: transparent;
+        }
+        &:hover {
+          &:after {
+            background-color: transparent;
+          }
+        }
+        .fa{
+@include rotate(180deg);
+        }
+      }
+
+      ul.dropdown-menu {
+        @include linearGradient(#063f76, #006099);
+        border: 0;
+        left: 0;
+        right: auto;
+        border-top-right-radius: 4px;
+
+        li {
+          a {
+            color: white;
+
+            &:hover {
+              background-color: transparent;
+            }
+          }
+        }
+      }
+    }
+
     li {
       a {
-        padding:39.5px 0;
-        padding-left: 35px;
+        // padding: 14px 0 17px 35px;
+        padding:14px 18px 17px 18px;
         color: #242424;
         font-family: 'Lato';
         font-size: 18px;
         font-weight: 300;
         line-height: 22px;
-        &:after{
+
+
+        &:after {
           content: '';
           display: block;
           width: 100%;
@@ -61,9 +142,11 @@
           -webkit-transition: all 0.2s ease-in-out 0s;
           transition: all 0.2s ease-in-out 0s;
         }
-        &:hover{
+
+        &:hover {
           color: #ed7a27;
-          &:after{
+
+          &:after {
             background-color: #ed7a27;
             visibility: visible;
             -webkit-transform: scaleX(1);
@@ -71,7 +154,12 @@
           }
         }
       }
+      &:last-child{
+        a{
+              padding-right: 0;
+        }
 
+      }
     }
   }
 }
