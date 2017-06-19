@@ -1,0 +1,77 @@
+@import "bootstrap";
+@import url( 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
+
+.no-padding > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.top-header {
+  background-color: #edf0f5;
+  font-family: 'Lato';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 50px;
+  color: #90999c;
+
+  .more-info {
+    color: #ed7a27;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+
+    li {
+      display: inline-block;
+      padding-left: 20px;
+
+      i {
+        padding-right: 9px;
+      }
+    }
+  }
+}
+
+.navbar-default {
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  .navbar-nav {
+    li {
+      a {
+        padding:39.5px 0;
+        padding-left: 35px;
+        color: #242424;
+        font-family: 'Lato';
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 22px;
+        &:after{
+          content: '';
+          display: block;
+          width: 100%;
+          background-color: white;
+          margin-top: 4px;
+          height: 1px;
+          visibility: hidden;
+          -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+          -webkit-transition: all 0.2s ease-in-out 0s;
+          transition: all 0.2s ease-in-out 0s;
+        }
+        &:hover{
+          color: #ed7a27;
+          &:after{
+            background-color: #ed7a27;
+            visibility: visible;
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+          }
+        }
+      }
+
+    }
+  }
+}
