@@ -327,7 +327,49 @@ header {
     }
   }
 }
+.statistic-info-detail {
 
+  background-color: #00366f;
+  @include linearGradient(#ed7a27,#f39d29);
+
+
+  ul {
+    margin: 0;
+    list-style: none;
+    margin: 20px 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center;
+
+    li {
+      display: inline-block;
+      // float: left;
+      line-height: 39px;
+
+      &:nth-child(2) {
+        border-left: 1px solid rgba(255,255,255,0.1);
+        border-right: 1px solid rgba(255,255,255,0.1);
+        margin-left: 22px;
+        margin-right: 40px;
+        padding-left: 39px;
+        padding-right: 39px;
+      }
+
+      span {
+        color: #f9fafe;
+        font-family: 'Lato';
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      .fa {
+        font-size: 16px;
+        color: white;
+        margin-right: 10px;
+      }
+    }
+  }
+}
 main {
   .top-main {
     padding-top: 53px;

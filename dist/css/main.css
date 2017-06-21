@@ -6091,6 +6091,49 @@ header {
           color: white;
           margin-right: 10px; }
 
+.statistic-info-detail {
+  background-color: #00366f;
+  background: #ed7a27;
+  /* Old browsers */
+  background: -moz-linear-gradient(top, #ed7a27 0%, #f39d29 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, bootom, top, color-stop(0%, #ed7a27), color-stop(100%, #f39d29));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #ed7a27 0%, #f39d29 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #ed7a27 0%, #f39d29 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #ed7a27 0%, #f39d29 100%);
+  /* IE10+ */
+  background: linear-gradient(to top, #ed7a27 0%, #f39d29 100%);
+  /* W3C */ }
+  .statistic-info-detail ul {
+    margin: 0;
+    list-style: none;
+    margin: 20px 0;
+    overflow: hidden;
+    padding: 0;
+    text-align: center; }
+    .statistic-info-detail ul li {
+      display: inline-block;
+      line-height: 39px; }
+      .statistic-info-detail ul li:nth-child(2) {
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        margin-left: 22px;
+        margin-right: 40px;
+        padding-left: 39px;
+        padding-right: 39px; }
+      .statistic-info-detail ul li span {
+        color: #f9fafe;
+        font-family: 'Lato';
+        font-size: 15px;
+        font-weight: 300; }
+      .statistic-info-detail ul li .fa {
+        font-size: 16px;
+        color: white;
+        margin-right: 10px; }
+
 main .top-main {
   padding-top: 53px;
   background-color: white;
