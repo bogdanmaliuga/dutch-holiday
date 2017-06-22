@@ -1,11 +1,18 @@
 @charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0px;
+  padding: 0px; }
+
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
  * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-@import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -6091,6 +6098,50 @@ header {
           color: white;
           margin-right: 10px; }
 
+.social-bread ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  .social-bread ul li {
+    float: left;
+    display: inline-block; }
+    .social-bread ul li:after {
+      content: '\f105';
+      display: inline-block;
+      font-size: 12px;
+      margin: 0 9px;
+      display: inline-block;
+      font: normal normal normal 14px/1 FontAwesome;
+      font-size: inherit;
+      text-rendering: auto;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transform: translate(0, 0);
+      font-size: 12px;
+      color: #898989; }
+    .social-bread ul li:last-child:after {
+      display: none; }
+    .social-bread ul li a {
+      color: #898989;
+      font-family: 'Lato';
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 44px; }
+
+.social-bread .social-links {
+  text-align: right; }
+  .social-bread .social-links a {
+    display: inline-block;
+    float: right;
+    width: 16px;
+    height: 16px;
+    background-color: blue;
+    margin: 14px 3px;
+    line-height: 16px;
+    text-align: center; }
+    .social-bread .social-links a .fa {
+      font-size: 12px; }
+
 .statistic-info-detail {
   background-color: #00366f;
   background: #ed7a27;
@@ -6266,6 +6317,7 @@ main .detail-top {
 
 main .detail-info-hotel {
   padding-top: 45px;
+  padding-bottom: 76px;
   text-align: center; }
   main .detail-info-hotel h1 {
     color: #242424;
@@ -6288,9 +6340,8 @@ main .detail-info-hotel {
     font-size: 16px;
     font-weight: 300;
     line-height: 32px;
-    padding: 0px 108.5px;
-    margin: 0;
-    margin-bottom: 35px; }
+    padding: 0 108.5px;
+    margin: 0 0 35px; }
   main .detail-info-hotel ul {
     list-style: none;
     margin: 0;
@@ -6325,6 +6376,56 @@ main .detail-info-hotel {
         font-size: 48px;
         font-weight: 600;
         line-height: 36px; }
+
+main .detail-map {
+  background-color: #edf0f5;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin-bottom: 75px; }
+  main .detail-map h1 {
+    color: #242424;
+    font-family: 'Lato';
+    margin-top: 73px;
+    font-size: 48px;
+    /* Text style for "Ligging" */
+    font-weight: 300; }
+    main .detail-map h1 span {
+      font-weight: 600; }
+  main .detail-map h2 {
+    color: #90999c;
+    margin-top: 16px;
+    font-family: 'Lato';
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 43px; }
+  main .detail-map ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 72px; }
+    main .detail-map ul li {
+      color: #90999c;
+      font-size: 16px;
+      line-height: 32px;
+      /* Text style for "Centrum Wi" */
+      font-family: 'Lato';
+      font-weight: 300; }
+  main .detail-map #map {
+    height: 100%;
+    position: absolute !important;
+    right: 0;
+    top: 0;
+    width: 50%;
+    float: right; }
+    main .detail-map #map:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 20%;
+      height: 100%;
+      background-color: #edf0f5; }
 
 main .top-main {
   padding-top: 53px;
@@ -6810,6 +6911,8 @@ footer {
     padding-top: 60px;
     margin-top: -5px;
     margin-bottom: 58px; }
+    footer .footer-links-container img {
+      max-width: 100%; }
     footer .footer-links-container .firm-info {
       color: #ffffff;
       font-family: 'Lato';

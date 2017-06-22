@@ -57,6 +57,25 @@
       </div>
     </div>
   </nav>
+  <div class="social-bread">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-6">
+          <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Vakantiewoningen</a></li>
+            <li><a href="">Villa Jan Thiel</a></li>
+          </ul>
+        </div>
+        <div class="col-xs-6 social-links">
+            <a class='social-item' href=""><i class="fa fa-facebook"></i></a>
+            <a class='social-item' href=""><i class="fa fa-linkedin"></i></a>
+            <a class='social-item' href=""><i class="fa fa-twitter"></i></a>
+            <a class='social-item' href=""><i class="fa fa-youtube"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
   <div class="statistic-info-detail">
     <div class="container">
       <div class="row">
@@ -109,6 +128,23 @@
         </div>
       </div>
     </div>
+    <div class="detail-map">
+        <div id="map"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-6">
+            <h1>Ligging <span>Villa Jan Thiel</span></h1>
+            <h2>Bekijk hiernaast de ligging op de kaart</h2>
+            <ul>
+              <li>· Centrum Willemstad op ca. 10 km</li>
+              <li>· Luchthaven Hato International Airport op ca. 22 km</li>
+              <li>· Strand op ca. 400 m</li>
+              <li>· Supermarkt op ca. 300 m</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <div class="bottom-main">
       <div class="container">
         <div class="row">
@@ -129,8 +165,6 @@
                       </a>
               </div>
             </div>
-
-
           </div>
         </div>
       </div>
@@ -186,8 +220,6 @@
               <a class='social-item' href=""><i class="fa fa-twitter"></i></a>
               <a class='social-item' href=""><i class="fa fa-youtube"></i></a>
               <a class='social-item' href=""><i class="fa fa-instagram"></i></a>
-
-
             </div>
           </div>
         </div>
@@ -286,6 +318,25 @@
       </div>
     </div>
   </footer>
+  <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          center: {lat: 12.072670, lng: -68.874653},
+
+          zoom: 16,
+          styles:[{"featureType":"administrative.locality","elementType":"all","stylers":[{"hue":"#2c2e33"},{"saturation":7},{"lightness":19},{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"simplified"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":-2},{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"hue":"#e9ebed"},{"saturation":-90},{"lightness":-8},{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":10},{"lightness":69},{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":-78},{"lightness":67},{"visibility":"simplified"}]}]
+        });
+        var marker = new google.maps.Marker({
+          position: new google.maps.LatLng(12.072670, -68.874653),
+          map: map,
+          icon:'img/map-icon.png',
+          title: 'Hello World!'
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANaGw7fadfhY9rtdI_KzFyL2CrjwVJxLs&callback=initMap"
+    async defer></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
 </body>
