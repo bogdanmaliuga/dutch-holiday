@@ -5826,6 +5826,9 @@ button.close {
   padding-right: 0;
   padding-left: 0; }
 
+img.mobile {
+  display: none; }
+
 .top-header {
   background-color: #edf0f5;
   line-height: 50px; }
@@ -7436,3 +7439,196 @@ footer {
           line-height: 32px;
           /* Text style for "Privacybel" */
           color: #6c9ebe; }
+
+@media (max-width: 1024px) {
+  img.desktop {
+    display: none; }
+  img.mobile {
+    display: block; }
+  .navbar-header {
+    float: none; }
+  .navbar-toggle {
+    display: block;
+    float: left;
+    border: none;
+    padding: 17px 0 17px 7px; }
+  .navbar-collapse {
+    border-top: 1px solid transparent;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1); }
+  .navbar-brand {
+    padding: 12px 0 0 3px; }
+  .navbar-collapse.collapse {
+    display: none !important; }
+  .navbar-collapse.collapse.in {
+    display: block !important; }
+  .navbar-nav {
+    float: none !important;
+    margin: 7.5px -15px; }
+  .navbar-nav > li {
+    float: none; }
+  .navbar-nav > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  body.not-index {
+    padding-top: 56px; }
+  .navbar-default .navbar-toggle {
+    background-color: transparent; }
+    .navbar-default .navbar-toggle .icon-bar {
+      background-color: #ed7a27;
+      height: 4px; }
+    .navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover {
+      background-color: transparent; }
+  .navbar-collapse {
+    border: none;
+    box-shadow: none; }
+  .navbar.hover-navbar {
+    padding-bottom: 0; }
+  .navbar {
+    padding: 8.5px 0; }
+    .navbar .navbar-header {
+      padding: 0 20px; }
+    .navbar ul.nav {
+      padding-top: 1px;
+      margin-top: 8.5px;
+      border-top: 1px solid #ebebeb;
+      padding-bottom: 0;
+      margin-bottom: 0; }
+      .navbar ul.nav li.dropdown ul.dropdown-menu {
+        border-top: 1px solid #ebebeb;
+        background-image: none;
+        background-color: #fff;
+        border: none;
+        color: black;
+        width: 100%; }
+        .navbar ul.nav li.dropdown ul.dropdown-menu li {
+          background-color: #f5f5f5; }
+          .navbar ul.nav li.dropdown ul.dropdown-menu li a:hover {
+            text-decoration: none;
+            font-weight: 600; }
+      .navbar ul.nav li.my-account {
+        margin-left: 0; }
+        .navbar ul.nav li.my-account > a {
+          background-color: #fff;
+          border: none;
+          box-shadow: none;
+          background-image: none;
+          color: black;
+          padding: 0 0 0 18.5px;
+          margin: 0; }
+          .navbar ul.nav li.my-account > a .fa {
+            float: right;
+            margin-top: 19px;
+            margin-right: 19px; }
+          .navbar ul.nav li.my-account > a:hover:before {
+            display: none; }
+          .navbar ul.nav li.my-account > a:focus {
+            color: #1d1d1b;
+            font-weight: 200; }
+      .navbar ul.nav li.open a {
+        background-image: none !important;
+        background-color: #fff;
+        border: none;
+        color: black; }
+        .navbar ul.nav li.open a:focus, .navbar ul.nav li.open a:hover {
+          color: #1d1d1b;
+          background-color: white;
+          font-weight: 600; }
+      .navbar ul.nav li {
+        border-bottom: 1px solid #ebebeb; }
+        .navbar ul.nav li a:before {
+          display: none; }
+        .navbar ul.nav li a:hover {
+          font-weight: 600; }
+        .navbar ul.nav li a sup {
+          top: 0;
+          margin-left: 8px; }
+        .navbar ul.nav li:last-child {
+          border-bottom: 0; } }
+
+@media (max-width: 768px) {
+  .top-header {
+    line-height: 29px;
+    text-align: center; }
+    .top-header .more-info {
+      line-height: 30px; }
+      .top-header .more-info span {
+        letter-spacing: 0.9px; }
+    .top-header ul {
+      display: none; }
+  .img.mobile {
+    width: 225px; }
+  header .blur-text {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 112px; }
+    header .blur-text h1 {
+      display: none; }
+    header .blur-text h2 {
+      display: none; }
+    header .blur-text:before {
+      display: none; }
+    header .blur-text .outlinebtn {
+      margin-left: 4px;
+      margin-bottom: 10px;
+      width: 189px; }
+      header .blur-text .outlinebtn a {
+        font-size: 12px;
+        padding: 22px 22px 23px;
+        letter-spacing: 0.5px; }
+        header .blur-text .outlinebtn a .fa {
+          margin-left: 12px;
+          font-size: 16px; }
+  header .statistic-info ul {
+    margin: 3px 0; }
+    header .statistic-info ul li span {
+      font-size: 14px;
+      letter-spacing: 0.6px; }
+    header .statistic-info ul li .fa {
+      font-size: 20px; }
+    header .statistic-info ul li:nth-child(2) {
+      display: none; }
+    header .statistic-info ul li:nth-child(3) {
+      display: none; }
+  main .top-main {
+    padding-top: 30px; }
+    main .top-main h1 {
+      font-size: 24px;
+      word-break: break-all;
+      padding: 0 37px;
+      line-height: 29px;
+      margin-top: 16px;
+      letter-spacing: 1px; }
+    main .top-main h2 {
+      font-size: 18px;
+      margin-top: 12px;
+      line-height: 21px;
+      letter-spacing: 0.7px;
+      padding: 0 15px;
+      margin-bottom: 23px; }
+    main .top-main ul.row-hotels {
+      margin: 0 12.5px; }
+      main .top-main ul.row-hotels li {
+        margin-bottom: 28px;
+        width: 100%; }
+        main .top-main ul.row-hotels li:nth-child(2) {
+          margin: 0;
+          margin-bottom: 28px; }
+        main .top-main ul.row-hotels li h3 {
+          line-height: 36px;
+          letter-spacing: -0.2px;
+          text-align: center;
+          padding-left: 0; }
+        main .top-main ul.row-hotels li .overlay {
+          height: 36px; }
+        main .top-main ul.row-hotels li .price-block {
+          width: 96px;
+          height: 68px;
+          background-size: cover;
+          top: 13px;
+          right: 14px; }
+          main .top-main ul.row-hotels li .price-block h4 {
+            font-size: 13px;
+            margin: 0;
+            padding: 0 3px;
+            margin-top: 22px;
+            line-height: 16px; } }

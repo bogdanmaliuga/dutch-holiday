@@ -36,6 +36,9 @@ html {
   padding-right: 0;
   padding-left: 0;
 }
+img.mobile{
+  display: none;
+}
 
 .top-header {
   background-color: #edf0f5;
@@ -1973,3 +1976,4 @@ letter-spacing: 0.3px;
     }
   }
 }
+@import "responsible";
