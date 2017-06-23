@@ -1,11 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900");
-html,
-body {
+body,
+html {
   height: 100%;
   width: 100%;
-  margin: 0px;
-  padding: 0px; }
+  margin: 0;
+  padding: 0; }
 
 /*!
  * Bootstrap v3.3.7 (http://getbootstrap.com)
@@ -5828,13 +5828,18 @@ button.close {
 
 .top-header {
   background-color: #edf0f5;
-  font-family: 'Lato';
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 50px;
-  color: #90999c; }
+  line-height: 50px; }
   .top-header .more-info {
-    color: #ed7a27; }
+    font-family: 'Lato';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    /* Text style for "Meer infor" */
+    color: #ed7a27;
+    letter-spacing: 0.5px; }
+    .top-header .more-info span {
+      padding-left: 4.5px;
+      color: #90999c; }
   .top-header ul {
     list-style: none;
     margin: 0;
@@ -5842,7 +5847,14 @@ button.close {
     text-align: right; }
     .top-header ul li {
       display: inline-block;
-      padding-left: 20px; }
+      padding-left: 15px; }
+      .top-header ul li a {
+        color: #90999c;
+        font-family: 'Lato';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.5px; }
       .top-header ul li i {
         padding-right: 9px; }
 
@@ -5903,12 +5915,13 @@ button.close {
         .navbar-default .navbar-nav li.dropdown.open ul.dropdown-menu li a:hover {
           background-color: transparent; }
     .navbar-default .navbar-nav li a {
-      padding: 14px 18px 17px;
+      padding: 18px 18.5px 14px 17px;
       color: #242424;
       font-family: 'Lato';
       font-size: 18px;
       font-weight: 300;
-      line-height: 22px; }
+      line-height: 22px;
+      letter-spacing: 0.4px; }
       .navbar-default .navbar-nav li a:after {
         content: '';
         display: block;
@@ -6092,7 +6105,8 @@ header {
           color: #f9fafe;
           font-family: 'Lato';
           font-size: 15px;
-          font-weight: 300; }
+          font-weight: 300;
+          letter-spacing: 0.4px; }
         header .statistic-info ul li .fa {
           font-size: 16px;
           color: white;
@@ -6101,7 +6115,8 @@ header {
 .social-bread ul {
   margin: 0;
   padding: 0;
-  list-style: none; }
+  list-style: none;
+  padding-top: 6px; }
   .social-bread ul li {
     float: left;
     display: inline-block; }
@@ -6126,17 +6141,39 @@ header {
       font-family: 'Lato';
       font-size: 12px;
       font-weight: 300;
-      line-height: 44px; }
+      line-height: 44px;
+      letter-spacing: 0.4px; }
 
 .social-bread .social-links {
   text-align: right; }
+  .social-bread .social-links span {
+    color: #898989;
+    font-family: 'Lato';
+    font-size: 12px;
+    font-weight: 300;
+    padding-top: 19px;
+    letter-spacing: 0.5px;
+    display: inline-block; }
+  .social-bread .social-links a.facebook {
+    background-color: #3b5998; }
+  .social-bread .social-links a.twitter {
+    background-color: #0084bf; }
+  .social-bread .social-links a.google {
+    background-color: #db4437; }
+  .social-bread .social-links a.email {
+    background-color: #797979;
+    line-height: 15px; }
+    .social-bread .social-links a.email .fa {
+      width: 11.14px; }
   .social-bread .social-links a {
     display: inline-block;
     float: right;
     width: 16px;
     height: 16px;
-    background-color: blue;
-    margin: 14px 3px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 8px;
+    margin-left: 3px;
     line-height: 16px;
     text-align: center; }
     .social-bread .social-links a .fa {
@@ -6175,11 +6212,14 @@ header {
         margin-right: 40px;
         padding-left: 39px;
         padding-right: 39px; }
+      .statistic-info-detail ul li .fa-home {
+        width: 20px; }
       .statistic-info-detail ul li span {
         color: #f9fafe;
         font-family: 'Lato';
         font-size: 15px;
-        font-weight: 300; }
+        font-weight: 300;
+        letter-spacing: 0.5px; }
       .statistic-info-detail ul li .fa {
         font-size: 16px;
         color: white;
@@ -6211,16 +6251,18 @@ main .detail-top {
     height: 100%;
     background-size: cover; }
   main .detail-top h1 {
-    margin-top: 14px;
+    margin-top: 6px;
     color: #ffffff;
     font-family: 'Lato';
     font-size: 48px;
     /* Text style for "Villa Jan" */
-    font-weight: 300; }
+    font-weight: 300;
+    letter-spacing: 2.3px; }
     main .detail-top h1 span {
       font-weight: 600; }
   main .detail-top h2 {
-    margin-top: 18px;
+    letter-spacing: 0.5px;
+    margin-top: 16px;
     color: #ffffff;
     font-family: 'Lato';
     font-size: 24px;
@@ -6232,15 +6274,16 @@ main .detail-top {
     height: 195px;
     background-image: url("../img/price-big-bg.png"); }
     main .detail-top .price-big-bg h4 {
-      margin-top: 85px;
-      margin-bottom: 47px;
+      margin-top: 77px;
+      margin-bottom: 43px;
       color: #ffffff;
       font-family: 'Lato';
       font-size: 29px;
       line-height: 37px;
-      font-weight: 700; }
+      font-weight: 700;
+      letter-spacing: 0.5px; }
       main .detail-top .price-big-bg h4 span {
-        line-height: 26px;
+        line-height: 38px;
         font-weight: 300;
         display: block;
         text-align: center; }
@@ -6250,8 +6293,7 @@ main .detail-top {
     border-radius: 100px;
     vertical-align: middle;
     transition: all 0.3s linear;
-    margin-top: 8px;
-    margin-top: 55px;
+    margin-top: 46px;
     background: #eeeeee;
     /* Old browsers */
     background: -moz-linear-gradient(top, #eeeeee 0%, #ffffff 100%);
@@ -6267,6 +6309,7 @@ main .detail-top {
     background: linear-gradient(to top, #eeeeee 0%, #ffffff 100%);
     /* W3C */ }
     main .detail-top .outlinebtn a {
+      letter-spacing: 0.8px;
       color: #242424;
       font-family: 'Lato';
       font-size: 16px;
@@ -6282,7 +6325,7 @@ main .detail-top {
       text-overflow: ellipsis;
       background-color: white;
       border: none;
-      padding: 29px 37px;
+      padding: 27px 29px;
       border-radius: 100px;
       cursor: pointer;
       -webkit-appearance: none;
@@ -6291,7 +6334,7 @@ main .detail-top {
       main .detail-top .outlinebtn a .fa {
         transition: all 0.3s linear;
         color: #242424;
-        margin-left: 9px; }
+        margin-left: 7px; }
     main .detail-top .outlinebtn:hover {
       background: #eeeeee;
       /* Old browsers */
@@ -6316,23 +6359,25 @@ main .detail-top {
           transition: all 0.3s linear; }
 
 main .detail-info-hotel {
-  padding-top: 45px;
+  padding-top: 35px;
   padding-bottom: 76px;
   text-align: center; }
   main .detail-info-hotel h1 {
     color: #242424;
     font-family: 'Lato';
     font-size: 48px;
+    letter-spacing: 2.3px;
     font-weight: 300; }
     main .detail-info-hotel h1 span {
       font-weight: 600; }
   main .detail-info-hotel h2 {
-    margin-top: 15px;
+    margin-top: 13px;
+    letter-spacing: 0.5px;
     color: #898989;
     font-family: 'Lato';
     font-size: 24px;
     font-weight: 300;
-    margin-bottom: 44px; }
+    margin-bottom: 34px; }
   main .detail-info-hotel p {
     color: #898989;
     font-family: 'Lato';
@@ -6340,8 +6385,9 @@ main .detail-info-hotel {
     font-size: 16px;
     font-weight: 300;
     line-height: 32px;
-    padding: 0 108.5px;
-    margin: 0 0 35px; }
+    padding: 0 100.5px;
+    margin: 0 0 29px;
+    letter-spacing: 0.5px; }
   main .detail-info-hotel ul {
     list-style: none;
     margin: 0;
@@ -6382,35 +6428,39 @@ main .detail-map {
   width: 100%;
   height: 100%;
   position: relative;
-  margin-bottom: 75px; }
+  margin-bottom: 66px; }
   main .detail-map h1 {
     color: #242424;
     font-family: 'Lato';
-    margin-top: 73px;
+    margin-top: 64px;
     font-size: 48px;
     /* Text style for "Ligging" */
-    font-weight: 300; }
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-left: -4px; }
     main .detail-map h1 span {
       font-weight: 600; }
   main .detail-map h2 {
+    letter-spacing: 0.6px;
     color: #90999c;
-    margin-top: 16px;
+    margin-top: 14px;
     font-family: 'Lato';
     font-size: 24px;
     font-weight: 300;
-    margin-bottom: 43px; }
+    margin-bottom: 33px; }
   main .detail-map ul {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-bottom: 72px; }
+    margin-bottom: 67px; }
     main .detail-map ul li {
       color: #90999c;
       font-size: 16px;
       line-height: 32px;
       /* Text style for "Centrum Wi" */
       font-family: 'Lato';
-      font-weight: 300; }
+      font-weight: 300;
+      letter-spacing: 0.4px; }
   main .detail-map #map {
     height: 100%;
     position: absolute !important;
@@ -6425,7 +6475,383 @@ main .detail-map {
       top: 0;
       width: 20%;
       height: 100%;
-      background-color: #edf0f5; }
+      background-image: linear-gradient(to right, transparent, white); }
+
+main .search-block {
+  padding-bottom: 111px;
+  padding-top: 15px; }
+  main .search-block .filter-container ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; }
+  main .search-block .filter-container div.zoen {
+    padding-bottom: 238px;
+    margin-top: 30px;
+    border: 1px solid #edf0f5;
+    background-color: rgba(238, 238, 238, 0); }
+    main .search-block .filter-container div.zoen h4 {
+      padding-left: 15px;
+      letter-spacing: 0.5px;
+      margin-top: 25px;
+      color: #242424;
+      font-family: 'Lato';
+      font-size: 21px;
+      font-weight: 300; }
+    main .search-block .filter-container div.zoen ul.zoen-item {
+      margin-bottom: 13px; }
+      main .search-block .filter-container div.zoen ul.zoen-item h5.zoen-title.line-up:after {
+        -moz-transition: all 0.3s linear;
+        -webkit-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+        -ms-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg); }
+      main .search-block .filter-container div.zoen ul.zoen-item h5.zoen-title {
+        padding-left: 14px;
+        margin-top: 12px;
+        font-family: 'Lato';
+        font-size: 18px;
+        line-height: 45px;
+        /* Text style for "Landen" */
+        color: #242424;
+        font-weight: 600;
+        margin-bottom: 0; }
+        main .search-block .filter-container div.zoen ul.zoen-item h5.zoen-title:after {
+          font: normal normal normal 14px/1 FontAwesome;
+          content: "\f106";
+          width: 12px;
+          margin-right: 25px;
+          margin-top: 18px;
+          line-height: 13px;
+          height: 12px;
+          color: #1d1d1b;
+          font-size: 19px;
+          font-weight: 400;
+          float: right;
+          -moz-transition: all 0.3s linear;
+          -webkit-transition: all 0.3s linear;
+          transition: all 0.3s linear; }
+        main .search-block .filter-container div.zoen ul.zoen-item h5.zoen-title:hover {
+          cursor: pointer; }
+        main .search-block .filter-container div.zoen ul.zoen-item h5.zoen-title .fa {
+          float: right;
+          line-height: 45px;
+          margin-right: 27px;
+          font-size: 15px; }
+      main .search-block .filter-container div.zoen ul.zoen-item li {
+        border-bottom: 1px solid #edf0f5;
+        padding-left: 20px;
+        padding-right: 14px; }
+        main .search-block .filter-container div.zoen ul.zoen-item li:first-child {
+          border-top: 1px solid #edf0f5; }
+        main .search-block .filter-container div.zoen ul.zoen-item li span.count {
+          margin: 11.5px 0;
+          float: right;
+          color: #ed7a27;
+          font-family: 'Lato';
+          font-size: 12px;
+          font-weight: 300;
+          line-height: 19px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 20%;
+          border-radius: 9px;
+          border: 1px solid #ed7a27;
+          background-color: transparent;
+          min-width: 34px;
+          text-align: center; }
+        main .search-block .filter-container div.zoen ul.zoen-item li label {
+          letter-spacing: 0.5px;
+          font-family: 'Lato';
+          font-size: 18px;
+          line-height: 38px;
+          /* Text style for "Nederland" */
+          color: #8a8a8a;
+          font-weight: 300;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          max-width: 80%;
+          margin-bottom: 0; }
+        main .search-block .filter-container div.zoen ul.zoen-item li .styled-checkbox {
+          position: absolute;
+          opacity: 0; }
+          main .search-block .filter-container div.zoen ul.zoen-item li .styled-checkbox + label {
+            position: relative;
+            cursor: pointer;
+            padding: 0; }
+          main .search-block .filter-container div.zoen ul.zoen-item li .styled-checkbox + label:before {
+            content: '';
+            margin-right: 9px;
+            display: inline-block;
+            vertical-align: middle;
+            width: 13px;
+            height: 13px;
+            border-radius: 4px;
+            border: 1px solid #ebebeb;
+            background-color: #ffffff; }
+          main .search-block .filter-container div.zoen ul.zoen-item li .styled-checkbox:checked + label:after {
+            content: '';
+            position: absolute;
+            left: 2px;
+            top: 50%;
+            background: white;
+            width: 2px;
+            height: 2px;
+            box-shadow: 2px 0 0 #7f7f7e, 4px 0 0 #7f7f7e, 4px -2px 0 #7f7f7e, 4px -4px 0 #7f7f7e, 4px -6px 0 #7f7f7e, 4px -8px 0 #7f7f7e;
+            transform: rotate(45deg); }
+  main .search-block .filter-container ul.cat {
+    border: 1px solid #edf0f5;
+    background-color: rgba(238, 238, 238, 0);
+    padding-bottom: 5px; }
+    main .search-block .filter-container ul.cat li.title-cat {
+      padding-left: 14px;
+      color: #242424;
+      font-family: 'Lato';
+      font-size: 18px;
+      font-weight: 700;
+      line-height: 44px;
+      letter-spacing: 0.5px; }
+    main .search-block .filter-container ul.cat li {
+      border-bottom: 1px solid #edf0f5; }
+      main .search-block .filter-container ul.cat li:last-child {
+        border-bottom: none; }
+      main .search-block .filter-container ul.cat li a {
+        padding-left: 19px;
+        color: #8a8a8a;
+        font-family: 'Lato';
+        font-size: 18px;
+        font-weight: 300;
+        letter-spacing: 0.4px;
+        line-height: 44px; }
+        main .search-block .filter-container ul.cat li a:hover {
+          color: #ed7a27; }
+  main .search-block .filter-container h3 {
+    color: #242424;
+    font-family: 'Lato';
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 43px;
+    margin: 0;
+    border: 1px solid #edf0f5;
+    background-color: rgba(238, 238, 238, 0);
+    text-align: center;
+    margin-bottom: 30px;
+    margin-top: 10px; }
+  main .search-block .result-container h1 {
+    margin-top: 0;
+    color: #242424;
+    font-family: 'Lato';
+    font-size: 48px;
+    /* Text style for "Mooie" */
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin-left: -4px; }
+    main .search-block .result-container h1 span {
+      letter-spacing: 1.7px;
+      font-weight: 600; }
+  main .search-block .result-container h2 {
+    letter-spacing: 0.6px;
+    margin-top: 13px;
+    color: #898989;
+    font-family: 'Lato';
+    font-size: 24px;
+    font-weight: 300;
+    margin-bottom: 26px; }
+  main .search-block .result-container ul.tags {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 30px; }
+    main .search-block .result-container ul.tags li {
+      margin-right: 10px;
+      float: left;
+      display: inline-block;
+      border-radius: 15px;
+      border: 1px solid #edf0f5;
+      background-color: transparent;
+      color: #898989;
+      font-family: 'Lato';
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 29px;
+      padding: 0 10px; }
+      main .search-block .result-container ul.tags li .fa {
+        margin-left: 8px;
+        font-size: 10px; }
+    main .search-block .result-container ul.tags li.delete-filters {
+      border: none;
+      padding: 0; }
+      main .search-block .result-container ul.tags li.delete-filters a {
+        color: #ed7a27;
+        font-family: 'Lato';
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 31px;
+        letter-spacing: 0.4px; }
+  main .search-block .result-container .navigation {
+    text-align: right;
+    overflow: hidden; }
+    main .search-block .result-container .navigation span {
+      color: #242424;
+      font-family: 'Lato';
+      font-size: 18px;
+      font-weight: 300;
+      line-height: 40px; }
+    main .search-block .result-container .navigation ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: inline-block;
+      float: left; }
+      main .search-block .result-container .navigation ul li {
+        display: inline-block;
+        float: left;
+        width: 40px;
+        border: 1px solid #edf0f5;
+        background-color: transparent;
+        text-align: center;
+        margin-right: 10px;
+        transition: background-color 0.3s linear; }
+        main .search-block .result-container .navigation ul li a {
+          transition: color 0.3s linear;
+          color: #242424;
+          font-family: 'Lato';
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 38px; }
+        main .search-block .result-container .navigation ul li:last-child {
+          margin-right: 0; }
+        main .search-block .result-container .navigation ul li:hover {
+          cursor: pointer;
+          background: #ed7a27;
+          /* Old browsers */
+          background: -moz-linear-gradient(top, #ed7a27 0%, #f39d29 100%);
+          /* FF3.6+ */
+          background: -webkit-gradient(linear, bootom, top, color-stop(0%, #ed7a27), color-stop(100%, #f39d29));
+          /* Chrome,Safari4+ */
+          background: -webkit-linear-gradient(top, #ed7a27 0%, #f39d29 100%);
+          /* Chrome10+,Safari5.1+ */
+          background: -o-linear-gradient(top, #ed7a27 0%, #f39d29 100%);
+          /* Opera 11.10+ */
+          background: -ms-linear-gradient(top, #ed7a27 0%, #f39d29 100%);
+          /* IE10+ */
+          background: linear-gradient(to top, #ed7a27 0%, #f39d29 100%);
+          /* W3C */
+          border-color: transparent;
+          transition: background 0.3s linear; }
+          main .search-block .result-container .navigation ul li:hover a {
+            transition: color 0.1s linear;
+            color: #ffffff;
+            text-decoration: none; }
+      main .search-block .result-container .navigation ul li.current {
+        border: 1px solid #edf0f5;
+        background-color: #edf0f5; }
+      main .search-block .result-container .navigation ul li.mobile-nav {
+        display: none; }
+  main .search-block .result-container .results-list .result-item {
+    margin-bottom: 30px;
+    position: relative; }
+    main .search-block .result-container .results-list .result-item .img-container {
+      width: 100%;
+      height: 100%;
+      background-color: #242424;
+      opacity: 0.9; }
+    main .search-block .result-container .results-list .result-item table.ligging tr td:first-child {
+      padding-right: 30px; }
+    main .search-block .result-container .results-list .result-item table {
+      text-align: left;
+      color: #ffffff;
+      font-family: 'Lato';
+      margin-left: 19px; }
+      main .search-block .result-container .results-list .result-item table tr td:first-child {
+        font-size: 14px;
+        line-height: 24px;
+        /* Text style for "Vakantiewo" */
+        font-weight: 300;
+        padding-right: 50px; }
+      main .search-block .result-container .results-list .result-item table tr td:last-child {
+        font-weight: 700; }
+    main .search-block .result-container .results-list .result-item h5 {
+      color: #ffffff;
+      font-family: 'Lato';
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0;
+      padding-left: 19px;
+      margin-top: 30px;
+      text-align: left; }
+    main .search-block .result-container .results-list .result-item img {
+      max-width: 100%;
+      width: 100%;
+      height: auto;
+      position: relative; }
+    main .search-block .result-container .results-list .result-item .price-block {
+      position: absolute;
+      bottom: 19px;
+      right: 19px;
+      width: 131px;
+      height: 95px;
+      background-image: url("../img/price-bg.png");
+      z-index: 2;
+      text-align: center; }
+      main .search-block .result-container .results-list .result-item .price-block h4 {
+        margin-top: 40px;
+        margin-bottom: 22px;
+        color: #ffffff;
+        font-family: 'Lato';
+        font-size: 14px;
+        line-height: 18px;
+        font-weight: 700;
+        padding: 0 10px; }
+        main .search-block .result-container .results-list .result-item .price-block h4 span {
+          font-weight: 300;
+          line-height: 15px;
+          display: block;
+          text-align: center; }
+    main .search-block .result-container .results-list .result-item .overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background-color: #ffffff;
+      background: #063f76;
+      /* Old browsers */
+      background: -moz-linear-gradient(top, #063f76 0%, #0e68a3 100%);
+      /* FF3.6+ */
+      background: -webkit-gradient(linear, bootom, top, color-stop(0%, #063f76), color-stop(100%, #0e68a3));
+      /* Chrome,Safari4+ */
+      background: -webkit-linear-gradient(top, #063f76 0%, #0e68a3 100%);
+      /* Chrome10+,Safari5.1+ */
+      background: -o-linear-gradient(top, #063f76 0%, #0e68a3 100%);
+      /* Opera 11.10+ */
+      background: -ms-linear-gradient(top, #063f76 0%, #0e68a3 100%);
+      /* IE10+ */
+      background: linear-gradient(to top, #063f76 0%, #0e68a3 100%);
+      /* W3C */
+      opacity: 0.9;
+      overflow: hidden;
+      width: 100%;
+      height: 50px;
+      transition: 0.5s ease; }
+    main .search-block .result-container .results-list .result-item:hover {
+      cursor: pointer; }
+      main .search-block .result-container .results-list .result-item:hover .overlay {
+        height: 100%; }
+    main .search-block .result-container .results-list .result-item h3 {
+      color: #ffffff;
+      font-family: 'Lato';
+      font-size: 14px;
+      font-weight: 700;
+      margin: 0;
+      padding-left: 19px;
+      line-height: 50px;
+      text-align: left; }
 
 main .top-main {
   padding-top: 53px;
@@ -6877,42 +7303,47 @@ footer {
   footer .footer-info .work-info-container {
     overflow: hidden;
     display: inline-block;
-    padding-top: 53px; }
+    padding-top: 58px;
+    margin-right: 108px; }
     footer .footer-info .work-info-container img {
       width: 108px;
       height: 145px;
-      float: left; }
+      float: left;
+      margin-right: 28px; }
     footer .footer-info .work-info-container .work-info {
       float: left;
-      padding-left: 28px;
       text-align: left; }
       footer .footer-info .work-info-container .work-info h3 {
         color: #f39d29;
         font-family: 'Lato';
         font-size: 18px;
         font-weight: 700;
-        margin-top: 19px;
-        margin-bottom: 15px; }
+        margin-top: 18px;
+        letter-spacing: 0.95px;
+        margin-bottom: 8px; }
       footer .footer-info .work-info-container .work-info span.tel {
         color: #ffffff;
         font-family: 'Lato';
         font-size: 25px;
         font-weight: 700;
-        display: block; }
+        display: block;
+        margin-bottom: 6px; }
       footer .footer-info .work-info-container .work-info span.work-hours {
         color: #ffffff;
         font-family: 'Lato';
         font-size: 14px;
         font-weight: 300;
         line-height: 24px;
-        display: block; }
+        display: block;
+        letter-spacing: 0.7px; }
   footer .footer-links-container {
     border-top: 1px solid #0e68a3;
-    padding-top: 60px;
+    padding-top: 48px;
     margin-top: -5px;
-    margin-bottom: 58px; }
+    margin-bottom: 50px; }
     footer .footer-links-container img {
-      max-width: 100%; }
+      max-width: 100%;
+      margin-top: 13px; }
     footer .footer-links-container .firm-info {
       color: #ffffff;
       font-family: 'Lato';
@@ -6922,17 +7353,19 @@ footer {
       footer .footer-links-container .firm-info h3 {
         color: #ffffff;
         font-family: 'Lato';
-        margin-top: 16px;
-        margin-bottom: 37px;
+        margin-top: 4px;
+        margin-bottom: 36px;
         font-size: 16px;
         font-weight: 300;
         line-height: 36px; }
       footer .footer-links-container .firm-info span {
         display: block; }
       footer .footer-links-container .firm-info span.tel .fa {
-        padding-right: 16px; }
+        padding-right: 22px;
+        font-size: 18px; }
       footer .footer-links-container .firm-info span.email .fa {
-        padding-right: 14px; }
+        padding-right: 14px;
+        font-size: 21px; }
     footer .footer-links-container ul {
       list-style: none;
       margin: 0;
@@ -6949,7 +7382,8 @@ footer {
         font-size: 16px;
         font-weight: 300;
         line-height: 36px;
-        color: #ffffff; }
+        color: #ffffff;
+        letter-spacing: 0.4px; }
         footer .footer-links-container ul li a:hover {
           text-decoration: none;
           color: #f39d29; }
@@ -6971,13 +7405,16 @@ footer {
       font-family: 'Lato';
       font-size: 16px;
       font-weight: 700;
-      line-height: 32px; }
+      line-height: 32px;
+      letter-spacing: 0.4px; }
     footer .bottom-footer a {
       color: #ffffff;
       font-family: 'Lato';
       font-size: 16px;
       font-weight: 300;
-      line-height: 32px; }
+      line-height: 32px;
+      line-height: 26px;
+      letter-spacing: 0.3px; }
     footer .bottom-footer ul {
       list-style: none;
       margin: 0;

@@ -1,9 +1,9 @@
-html,
-body {
+body,
+html {
   height: 100%;
   width: 100%;
-  margin: 0px;
-  padding: 0px
+  margin: 0;
+  padding: 0;
 }
 @import "bootstrap";
 @import url( 'https://fonts.googleapis.com/css?family=Lato:300,400,700,900');
@@ -39,14 +39,21 @@ body {
 
 .top-header {
   background-color: #edf0f5;
-  font-family: 'Lato';
-  font-size: 14px;
-  font-weight: 400;
   line-height: 50px;
-  color: #90999c;
 
   .more-info {
+    font-family: 'Lato';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 22px;
+    /* Text style for "Meer infor" */
     color: #ed7a27;
+    letter-spacing: 0.5px;
+
+    span {
+      padding-left: 4.5px;
+      color: #90999c;
+    }
   }
 
   ul {
@@ -57,7 +64,16 @@ body {
 
     li {
       display: inline-block;
-      padding-left: 20px;
+      padding-left: 15px;
+
+      a {
+        color: #90999c;
+        font-family: 'Lato';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        letter-spacing: 0.5px;
+      }
 
       i {
         padding-right: 9px;
@@ -126,12 +142,13 @@ body {
     li {
       a {
         // padding: 14px 0 17px 35px;
-        padding: 14px 18px 17px;
+        padding: 18px 18.5px 14px 17px;
         color: #242424;
         font-family: 'Lato';
         font-size: 18px;
         font-weight: 300;
         line-height: 22px;
+        letter-spacing: 0.4px;
 
         &:after {
           content: '';
@@ -323,6 +340,7 @@ header {
           font-family: 'Lato';
           font-size: 15px;
           font-weight: 300;
+          letter-spacing: 0.4px;
         }
 
         .fa {
@@ -334,19 +352,23 @@ header {
     }
   }
 }
-.social-bread{
-  ul{
-    margin:0;
-    padding:0;
+
+.social-bread {
+  ul {
+    margin: 0;
+    padding: 0;
     list-style: none;
-    li{
+    padding-top: 6px;
+
+    li {
       float: left;
       display: inline-block;
-      &:after{
-        content:'\f105';
+
+      &:after {
+        content: '\f105';
         display: inline-block;
         font-size: 12px;
-        margin:0 9px;
+        margin: 0 9px;
         display: inline-block;
         font: normal normal normal 14px/1 FontAwesome;
         font-size: inherit;
@@ -357,38 +379,77 @@ header {
         font-size: 12px;
         color: #898989;
       }
-      &:last-child{
-        &:after{
+
+      &:last-child {
+        &:after {
           display: none;
         }
       }
-      a{
+
+      a {
         color: #898989;
         font-family: 'Lato';
         font-size: 12px;
         font-weight: 300;
-        line-height: 44px
+        line-height: 44px;
+        letter-spacing: 0.4px;
       }
     }
   }
-  .social-links{
+
+  .social-links {
     text-align: right;
-    a{
+
+    span {
+      color: #898989;
+      font-family: 'Lato';
+      font-size: 12px;
+      font-weight: 300;
+      padding-top: 19px;
+      letter-spacing: 0.5px;
       display: inline-block;
-      float:right;
+    }
+
+    a.facebook {
+      background-color: #3b5998;
+    }
+
+    a.twitter {
+      background-color: #0084bf;
+    }
+
+    a.google {
+      background-color: #db4437;
+    }
+
+    a.email {
+      background-color: #797979;
+      line-height: 15px;
+
+      .fa {
+        width: 11.14px;
+      }
+    }
+
+    a {
+      display: inline-block;
+      float: right;
       width: 16px;
       height: 16px;
-      background-color: blue;
-          margin: 14px 3px;
-          line-height: 16px;
-          text-align: center;
-          .fa{
-            font-size: 12px;
+      color: white;
+      margin-top: 20px;
+      margin-bottom: 8px;
+      margin-left: 3px;
+      line-height: 16px;
+      text-align: center;
 
-          }
+      .fa {
+        font-size: 12px;
+      }
     }
   }
 }
+
 .statistic-info-detail {
   background-color: #00366f;
   @include linearGradient(#ed7a27,#f39d29);
@@ -415,11 +476,16 @@ header {
         padding-right: 39px;
       }
 
+      .fa-home {
+        width: 20px;
+      }
+
       span {
         color: #f9fafe;
         font-family: 'Lato';
         font-size: 15px;
         font-weight: 300;
+        letter-spacing: 0.5px;
       }
 
       .fa {
@@ -465,12 +531,13 @@ main {
     }
 
     h1 {
-      margin-top: 14px;
+      margin-top: 6px;
       color: #ffffff;
       font-family: 'Lato';
       font-size: 48px;
       /* Text style for "Villa Jan" */
       font-weight: 300;
+      letter-spacing: 2.3px;
 
       span {
         font-weight: 600;
@@ -478,7 +545,8 @@ main {
     }
 
     h2 {
-      margin-top: 18px;
+      letter-spacing: 0.5px;
+      margin-top: 16px;
       color: #ffffff;
       font-family: 'Lato';
       font-size: 24px;
@@ -493,16 +561,17 @@ main {
       background-image: url("../img/price-big-bg.png");
 
       h4 {
-        margin-top: 85px;
-        margin-bottom: 47px;
+        margin-top: 77px;
+        margin-bottom: 43px;
         color: #ffffff;
         font-family: 'Lato';
         font-size: 29px;
         line-height: 37px;
         font-weight: 700;
+        letter-spacing: 0.5px;
 
         span {
-          line-height: 26px;
+          line-height: 38px;
           font-weight: 300;
           display: block;
           text-align: center;
@@ -516,11 +585,11 @@ main {
       border-radius: 100px;
       vertical-align: middle;
       transition: all 0.3s linear;
-      margin-top: 8px;
-      margin-top: 55px;
+      margin-top: 46px;
       @include linearGradient(#eeeeee, #ffffff);
 
       a {
+        letter-spacing: 0.8px;
         color: #242424;
         font-family: 'Lato';
         font-size: 16px;
@@ -536,7 +605,7 @@ main {
         text-overflow: ellipsis;
         background-color: white;
         border: none;
-        padding: 29px 37px;
+        padding: 27px 29px;
         border-radius: 100px;
         cursor: pointer;
         -webkit-appearance: none;
@@ -546,7 +615,7 @@ main {
         .fa {
           transition: all 0.3s linear;
           color: #242424;
-          margin-left: 9px;
+          margin-left: 7px;
         }
       }
 
@@ -571,7 +640,7 @@ main {
   }
 
   .detail-info-hotel {
-    padding-top: 45px;
+    padding-top: 35px;
     padding-bottom: 76px;
     text-align: center;
 
@@ -579,6 +648,7 @@ main {
       color: #242424;
       font-family: 'Lato';
       font-size: 48px;
+      letter-spacing: 2.3px;
       font-weight: 300;
 
       span {
@@ -587,12 +657,13 @@ main {
     }
 
     h2 {
-      margin-top: 15px;
+      margin-top: 13px;
+      letter-spacing: 0.5px;
       color: #898989;
       font-family: 'Lato';
       font-size: 24px;
       font-weight: 300;
-      margin-bottom: 44px;
+      margin-bottom: 34px;
     }
 
     p {
@@ -602,8 +673,9 @@ main {
       font-size: 16px;
       font-weight: 300;
       line-height: 32px;
-      padding: 0 108.5px;
-      margin: 0 0 35px;
+      padding: 0 100.5px;
+      margin: 0 0 29px;
+      letter-spacing: 0.5px;
     }
 
     ul {
@@ -658,46 +730,55 @@ main {
     width: 100%;
     height: 100%;
     position: relative;
-    margin-bottom: 75px;
-    h1{
+    margin-bottom: 66px;
+
+    h1 {
       color: #242424;
       font-family: 'Lato';
-      margin-top: 73px;
+      margin-top: 64px;
       font-size: 48px;
       /* Text style for "Ligging" */
       font-weight: 300;
-      span{
+      letter-spacing: 2px;
+      margin-left: -4px;
+
+      span {
         font-weight: 600;
       }
     }
-    h2{
+
+    h2 {
+      letter-spacing: 0.6px;
       color: #90999c;
-    margin-top: 16px;
-      font-family:'Lato';
+      margin-top: 14px;
+      font-family: 'Lato';
       font-size: 24px;
       font-weight: 300;
-      margin-bottom: 43px;
+      margin-bottom: 33px;
     }
-    ul{
+
+    ul {
       list-style: none;
-      margin:0;
-      padding:0;
-      margin-bottom: 72px;
-      li{
+      margin: 0;
+      padding: 0;
+      margin-bottom: 67px;
+
+      li {
         color: #90999c;
-          font-size: 16px;
-          line-height: 32px;
-          /* Text style for "Centrum Wi" */
-          font-family: 'Lato';
-          font-weight: 300;
+        font-size: 16px;
+        line-height: 32px;
+        /* Text style for "Centrum Wi" */
+        font-family: 'Lato';
+        font-weight: 300;
+        letter-spacing: 0.4px;
       }
     }
+
     #map {
       height: 100%;
       position: absolute !important;
-      right:0;
-      top:0;
-
+      right: 0;
+      top: 0;
       // position: relative;
       // overflow: hidden;
       width: 50%;
@@ -710,7 +791,490 @@ main {
         top: 0;
         width: 20%;
         height: 100%;
-        background-color: #edf0f5;
+        background-image: linear-gradient(to right, transparent, white);
+      }
+    }
+  }
+
+  .search-block {
+    padding-bottom: 111px;
+    padding-top: 15px;
+    // .row.full-height{
+    //   display: flex;
+    // }
+    .filter-container {
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+
+      div.zoen {
+        padding-bottom: 238px;
+        margin-top: 30px;
+        border: 1px solid #edf0f5;
+        background-color: rgba(238, 238, 238, 0);
+
+        h4 {
+          padding-left: 15px;
+          letter-spacing: 0.5px;
+          margin-top: 25px;
+          color: #242424;
+          font-family: 'Lato';
+          font-size: 21px;
+          font-weight: 300;
+        }
+
+        ul.zoen-item {
+          margin-bottom: 13px;
+          h5.zoen-title.line-up{
+            &:after {
+                // content: "\f106";
+                -moz-transition: all 0.3s linear;
+                -webkit-transition: all 0.3s linear;
+                transition: all 0.3s linear;
+                -ms-transform:rotate(180deg);
+                -moz-transform:rotate(180deg);
+                -webkit-transform:rotate(180deg);
+                transform:rotate(180deg);
+            }
+          }
+
+          h5.zoen-title {
+            padding-left: 14px;
+            margin-top: 12px;
+            font-family: 'Lato';
+            font-size: 18px;
+            line-height: 45px;
+            /* Text style for "Landen" */
+            color: #242424;
+            font-weight: 600;
+            margin-bottom: 0;
+            &:after{
+              font: normal normal normal 14px/1 FontAwesome;
+              content: "\f106";
+              width: 12px;
+              margin-right: 25px;
+              margin-top: 18px;
+              line-height: 13px;
+              height: 12px;
+              color: #1d1d1b;
+              font-size: 19px;
+              font-weight: 400;
+              float: right;
+              -moz-transition: all 0.3s linear;
+              -webkit-transition: all 0.3s linear;
+              transition: all 0.3s linear;
+            }
+            &:hover{
+              cursor: pointer;
+            }
+            .fa{
+              float: right;
+              line-height: 45px;
+              margin-right: 27px;
+              font-size: 15px;
+            }
+          }
+
+          li {
+            &:first-child{
+                border-top: 1px solid #edf0f5;
+            }
+            border-bottom: 1px solid #edf0f5;
+            padding-left: 20px;
+            padding-right: 14px;
+
+            span.count {
+              margin:11.5px 0;
+              float: right;
+              color: #ed7a27;
+              font-family: 'Lato';
+              font-size: 12px;
+              font-weight: 300;
+              line-height: 19px;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              max-width: 20%;
+              border-radius: 9px;
+              border: 1px solid #ed7a27;
+              background-color: rgba(0, 0, 0, 0);
+              min-width: 34px;
+              text-align: center;
+
+            }
+
+            label {
+              letter-spacing: 0.5px;
+              font-family: 'Lato';
+              font-size: 18px;
+              line-height: 38px;
+              /* Text style for "Nederland" */
+              color: #8a8a8a;
+              font-weight: 300;
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              max-width: 80%;
+              margin-bottom: 0;
+            }
+
+            .styled-checkbox {
+              position: absolute;
+              // take it out of document flow
+              opacity: 0;
+              // hide it
+              & + label {
+                position: relative;
+                cursor: pointer;
+                padding: 0;
+              }
+              // Box.
+              & + label:before {
+                content: '';
+                margin-right: 9px;
+                display: inline-block;
+                vertical-align: middle;
+                width: 13px;
+                height: 13px;
+                border-radius: 4px;
+                border: 1px solid #ebebeb;
+                background-color: #ffffff;
+              }
+
+              &:checked + label:after {
+                content: '';
+                position: absolute;
+                left: 2px;
+                top: 50%;
+                background: white;
+                width: 2px;
+                height: 2px;
+                box-shadow: 2px 0 0 #7f7f7e, 4px 0 0 #7f7f7e, 4px -2px 0 #7f7f7e, 4px -4px 0 #7f7f7e, 4px -6px 0 #7f7f7e, 4px -8px 0 #7f7f7e;
+                transform: rotate(45deg);
+              }
+            }
+          }
+        }
+      }
+
+      ul.cat {
+        border: 1px solid #edf0f5;
+        background-color: rgba(238, 238, 238, 0);
+        padding-bottom: 5px;
+
+        li.title-cat {
+          padding-left: 14px;
+          color: #242424;
+          font-family: 'Lato';
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 44px;
+          letter-spacing: 0.5px;
+        }
+
+        li {
+          border-bottom: 1px solid #edf0f5;
+
+          &:last-child {
+            border-bottom: none;
+          }
+
+          a {
+            padding-left: 19px;
+            color: #8a8a8a;
+            font-family: 'Lato';
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 0.4px;
+            line-height: 44px;
+
+            &:hover {
+              color: #ed7a27;
+            }
+          }
+        }
+      }
+
+      h3 {
+        color: #242424;
+        font-family: 'Lato';
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 43px;
+        margin: 0;
+        border: 1px solid #edf0f5;
+        background-color: rgba(238, 238, 238, 0);
+        text-align: center;
+        margin-bottom: 30px;
+        margin-top: 10px;
+      }
+    }
+
+    .result-container {
+      h1 {
+        margin-top: 0;
+        color: #242424;
+        font-family: 'Lato';
+        font-size: 48px;
+        /* Text style for "Mooie" */
+        font-weight: 300;
+        letter-spacing: 2px;
+        margin-left: -4px;
+
+        span {
+          letter-spacing: 1.7px;
+          font-weight: 600;
+        }
+      }
+
+      h2 {
+        letter-spacing: 0.6px;
+        margin-top: 13px;
+        color: #898989;
+        font-family: 'Lato';
+        font-size: 24px;
+        font-weight: 300;
+        margin-bottom: 26px;
+      }
+
+      ul.tags {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 30px;
+
+        li {
+          margin-right: 10px;
+          float: left;
+          display: inline-block;
+          border-radius: 15px;
+          border: 1px solid #edf0f5;
+          background-color: rgba(0, 0, 0, 0);
+          color: #898989;
+          font-family: 'Lato';
+          font-size: 12px;
+          font-weight: 300;
+          line-height: 29px;
+          padding: 0 10px;
+
+          .fa {
+            margin-left: 8px;
+            font-size: 10px;
+          }
+        }
+
+        li.delete-filters {
+          border: none;
+          padding: 0;
+
+          a {
+            color: #ed7a27;
+            font-family: 'Lato';
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 31px;
+            letter-spacing: 0.4px;
+          }
+        }
+      }
+
+      .navigation {
+        text-align: right;
+        overflow: hidden;
+
+        span {
+          color: #242424;
+          font-family: 'Lato';
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 40px;
+        }
+
+        ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: inline-block;
+          float: left;
+
+          li {
+            display: inline-block;
+            float: left;
+            width: 40px;
+            border: 1px solid #edf0f5;
+            background-color: rgba(0, 0, 0, 0);
+            text-align: center;
+            margin-right: 10px;
+            transition: background-color 0.3s linear;
+
+            a {
+              transition: color 0.3s linear;
+              color: #242424;
+              font-family: 'Lato';
+              font-size: 18px;
+              font-weight: 300;
+              line-height: 38px;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+
+            &:hover {
+              cursor: pointer;
+              @include linearGradient(#ed7a27,#f39d29);
+              border-color: transparent;
+              transition: background 0.3s linear;
+
+              a {
+                transition: color 0.1s linear;
+                color: #ffffff;
+                text-decoration: none;
+              }
+            }
+          }
+
+          li.current {
+            border: 1px solid #edf0f5;
+            background-color: #edf0f5;
+          }
+
+          li.mobile-nav {
+            display: none;
+          }
+        }
+      }
+
+      .results-list {
+        .result-item {
+          margin-bottom: 30px;
+          position: relative;
+
+          .img-container {
+            width: 100%;
+            height: 100%;
+            background-color: #242424;
+            opacity: 0.9;
+          }
+
+          table.ligging {
+            tr {
+              td {
+                &:first-child {
+                  padding-right: 30px;
+                }
+              }
+            }
+          }
+
+          table {
+            text-align: left;
+            color: #ffffff;
+            font-family: 'Lato';
+            margin-left: 19px;
+
+            tr {
+              td {
+                &:first-child {
+                  font-size: 14px;
+                  line-height: 24px;
+                  /* Text style for "Vakantiewo" */
+                  font-weight: 300;
+                  padding-right: 50px;
+                }
+
+                &:last-child {
+                  font-weight: 700;
+                }
+              }
+            }
+          }
+
+          h5 {
+            color: #ffffff;
+            font-family: 'Lato';
+            font-size: 14px;
+            font-weight: 700;
+            margin: 0;
+            padding-left: 19px;
+            margin-top: 30px;
+            text-align: left;
+          }
+
+          img {
+            max-width: 100%;
+            width: 100%;
+            height: auto;
+            position: relative;
+          }
+
+          .price-block {
+            position: absolute;
+            bottom: 19px;
+            right: 19px;
+            width: 131px;
+            height: 95px;
+            background-image: url("../img/price-bg.png");
+            z-index: 2;
+            text-align: center;
+
+            h4 {
+              margin-top: 40px;
+              margin-bottom: 22px;
+              color: #ffffff;
+              font-family: 'Lato';
+              font-size: 14px;
+              line-height: 18px;
+              font-weight: 700;
+              padding: 0 10px;
+
+              span {
+                font-weight: 300;
+                line-height: 15px;
+                display: block;
+                text-align: center;
+              }
+            }
+          }
+
+          .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: #ffffff;
+            @include linearGradient(#063f76, #0e68a3);
+            opacity: 0.9;
+            overflow: hidden;
+            width: 100%;
+            height: 50px;
+            transition: 0.5s ease;
+          }
+
+          &:hover {
+            cursor: pointer;
+
+            .overlay {
+              height: 100%;
+            }
+          }
+
+          h3 {
+            color: #ffffff;
+            font-family: 'Lato';
+            font-size: 14px;
+            font-weight: 700;
+            margin: 0;
+            padding-left: 19px;
+            line-height: 50px;
+            text-align: left;
+          }
+        }
       }
     }
   }
@@ -1211,17 +1775,19 @@ footer {
     .work-info-container {
       overflow: hidden;
       display: inline-block;
-      padding-top: 53px;
+      padding-top: 58px;
+    margin-right: 108px;
 
       img {
         width: 108px;
         height: 145px;
         float: left;
+        margin-right: 28px
       }
 
       .work-info {
         float: left;
-        padding-left: 28px;
+        // padding-left: 28px;
         text-align: left;
 
         h3 {
@@ -1229,8 +1795,9 @@ footer {
           font-family: 'Lato';
           font-size: 18px;
           font-weight: 700;
-          margin-top: 19px;
-          margin-bottom: 15px;
+          margin-top: 18px;
+    letter-spacing: 0.95px;
+          margin-bottom: 8px;
         }
 
         span.tel {
@@ -1239,6 +1806,7 @@ footer {
           font-size: 25px;
           font-weight: 700;
           display: block;
+          margin-bottom: 6px;
         }
 
         span.work-hours {
@@ -1248,6 +1816,7 @@ footer {
           font-weight: 300;
           line-height: 24px;
           display: block;
+          letter-spacing: 0.7px;
         }
       }
     }
@@ -1255,12 +1824,15 @@ footer {
 
   .footer-links-container {
     border-top: 1px solid #0e68a3;
-    padding-top: 60px;
+    padding-top: 48px;
     margin-top: -5px;
-    margin-bottom: 58px;
-    img{
+    margin-bottom: 50px;
+
+    img {
       max-width: 100%;
+      margin-top: 13px;
     }
+
     .firm-info {
       color: #ffffff;
       font-family: 'Lato';
@@ -1271,8 +1843,8 @@ footer {
       h3 {
         color: #ffffff;
         font-family: 'Lato';
-        margin-top: 16px;
-        margin-bottom: 37px;
+        margin-top: 4px;
+        margin-bottom: 36px;
         font-size: 16px;
         font-weight: 300;
         line-height: 36px;
@@ -1284,13 +1856,16 @@ footer {
 
       span.tel {
         .fa {
-          padding-right: 16px;
+          padding-right: 22px;
+    font-size: 18px;
         }
       }
 
       span.email {
         .fa {
+
           padding-right: 14px;
+font-size: 21px;
         }
       }
     }
@@ -1322,6 +1897,7 @@ footer {
           font-weight: 300;
           line-height: 36px;
           color: #ffffff;
+          letter-spacing: 0.4px;
 
           &:hover {
             text-decoration: none;
@@ -1354,6 +1930,7 @@ footer {
       font-size: 16px;
       font-weight: 700;
       line-height: 32px;
+      letter-spacing: 0.4px;
     }
 
     a {
@@ -1362,6 +1939,8 @@ footer {
       font-size: 16px;
       font-weight: 300;
       line-height: 32px;
+      line-height: 26px;
+letter-spacing: 0.3px;
     }
 
     ul {
