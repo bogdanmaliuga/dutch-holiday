@@ -31,6 +31,15 @@ html {
   transform: rotate($deegre);
   transition: transform 0.3s;
 }
+@mixin line-ellipses($lines, $line-height) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $lines;
+    line-height: $line-height;
+    max-height: $line-height * $lines;
+}
 
 .no-padding > [class*='col-'] {
   padding-right: 0;
@@ -1877,7 +1886,12 @@ font-size: 21px;
       list-style: none;
       margin: 0;
       padding: 0;
-
+        li.disable-desktop{
+          display: none;
+        }
+        li.disable-mobile{
+          display: block;
+        }
       li.empty {
         a {
           color: transparent;
