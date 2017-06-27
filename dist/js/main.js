@@ -4,7 +4,7 @@ jQuery(document).ready(function($) {
     if ($(this).next().css('display') == 'block') {
       $(this).next().css('display', 'none');
       $(this).removeClass('line-up');
-      
+
     } else {
       $(this).next().css('display', 'block');
       $(this).addClass('line-up');
@@ -12,5 +12,17 @@ jQuery(document).ready(function($) {
     }
 
 
+  });
+  $('.navbar-toggle').click(function(event) {
+
+    if ($(this).hasClass('collapsed')) {
+      $(this).addClass('menu-show');
+
+
+    } else {
+      $(this).removeClass('menu-show');
+
+
+    }
   });
 });
