@@ -563,7 +563,8 @@ main {
       z-index: 1;
       position: absolute;
       background-color: #555555;
-      background-image: linear-gradient(to top, #063f76 0%, #f39d29 100%);
+      @include linearGradient(#063f76,#f39d29);
+
       opacity: 0.35;
       left: 0;
       top: 0;
