@@ -356,76 +356,219 @@
   }
 
   main {
-    .detail-map{
+    .search-block {
+      .filter-container {
+        div.zoen {
+          padding-bottom: 10px;
+        }
+
+        .search-contrainer {
+          margin: 0 15px;
+          display: none;
+        }
+
+        h1 {
+          display: block;
+          text-align: center;
+          margin-top: 0;
+          color: #242424;
+          font-family: 'Lato';
+          font-size: 24px;
+          /* Text style for "Mooie" */
+          font-weight: 300;
+          letter-spacing: 1px;
+          line-height: 28px;
+          margin-bottom: 16px;
+
+          span {
+            font-weight: 600;
+          }
+        }
+
+        h2 {
+          display: block;
+          text-align: center;
+          letter-spacing: 0.6px;
+          margin-top: 13px;
+          color: #898989;
+          font-family: 'Lato';
+          font-size: 18px;
+          font-weight: 300;
+          margin-bottom: 23px;
+          padding: 0 15px;
+          line-height: 21px;
+          letter-spacing: 0.8px;
+        }
+
+        h2.open-filter {
+          display: block;
+          border: 1px solid #edf0f5;
+          background-color: #ffffff;
+          line-height: 42px;
+          margin: 15px;
+          text-align: left;
+          color: #898989;
+          font-family: 'Lato';
+          font-size: 12px;
+          font-weight: 300;
+
+          .fa {
+            margin-top: 16px;
+            margin-bottom: 16px;
+            float: right;
+          }
+        }
+
+        ul.tags {
+          display: block;
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          display: block;
+          overflow: hidden;
+          margin-bottom: 30px;
+          padding: 0 15px;
+
+          li {
+            margin-right: 12px;
+            float: left;
+            display: inline-block;
+            border-radius: 15px;
+            border: 1px solid #edf0f5;
+            background-color: rgba(0, 0, 0, 0);
+            color: #898989;
+            font-family: 'Lato';
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 29px;
+            padding: 0 8.7px;
+
+            .fa {
+              margin-left: 10px;
+              font-size: 10px;
+            }
+          }
+
+          li.delete-filters {
+            border: none;
+            padding: 0;
+            margin-right: 0;
+
+            a {
+              color: #ed7a27;
+              font-family: 'Lato';
+              font-size: 12px;
+              font-weight: 700;
+              line-height: 31px;
+              letter-spacing: 0.4px;
+            }
+          }
+        }
+      }
+
+      .result-container {
+        margin:0 15px;
+        h1 {
+          display: none;
+        }
+
+        h2 {
+          display: none;
+        }
+
+        ul.tags {
+          display: none;
+        }
+
+      }
+    }
+
+    .detail-map {
       text-align: center;
       background-color: #fff;
-      #map{
+
+      #map {
         width: 100%;
-        position: static;
+        position: relative !important;
+        float: none;
+        height: 383px;
       }
-      h1{
+
+      h1 {
         font-size: 24px;
-        margin:0;
+        margin: 0;
         letter-spacing: 1.1px;
       }
-      h2{
+
+      h2 {
         font-size: 18px;
         line-height: 21px;
         margin-top: 13px;
         margin-bottom: 16px;
       }
-      ul{
-        li{
+
+      ul {
+        margin-bottom: 25px;
+
+        li {
           font-size: 14px;
-line-height: 24px;
-letter-spacing: 0.6px;
-padding:0 15px;
+          line-height: 24px;
+          letter-spacing: 0.6px;
+          padding: 0 15px;
         }
       }
     }
-    .detail-info-hotel{
+
+    .detail-info-hotel {
       padding-top: 26px;
       padding-bottom: 45px;
       letter-spacing: 1.1px;
 
-      h1{
+      h1 {
         font-size: 24px;
-        padding:0 20px;
+        padding: 0 20px;
         letter-spacing: 1.2px;
         line-height: 28px;
         margin-bottom: 0;
       }
-      h2{
+
+      h2 {
         font-size: 18px;
         padding: 0 20px;
-    font-size: 18px;
-    margin-top: 11px;
-    line-height: 22px;
-    margin-bottom: 15px;
+        font-size: 18px;
+        margin-top: 11px;
+        line-height: 22px;
+        margin-bottom: 15px;
       }
-      p{
+
+      p {
         font-size: 14px;
         font-weight: 300;
         line-height: 24px;
         letter-spacing: 0.5px;
-        padding: 0px 10px;
+        padding: 0 10px;
         text-align: center;
         margin-bottom: 42px;
       }
-      ul{
+
+      ul {
         margin: 0 -15px;
-        li{
+
+        li {
           width: 100%;
           display: none;
-          &:nth-child(3){
+
+          &:nth-child(3) {
             display: block;
           }
-          img{
+
+          img {
             min-height: 260px;
           }
         }
       }
     }
+
     .detail-mobile-button {
       display: block;
       position: relative;

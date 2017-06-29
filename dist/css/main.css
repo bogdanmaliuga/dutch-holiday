@@ -6532,6 +6532,12 @@ main .detail-map {
 main .search-block {
   padding-bottom: 111px;
   padding-top: 15px; }
+  main .search-block .filter-container > h1 {
+    display: none; }
+  main .search-block .filter-container > h2 {
+    display: none; }
+  main .search-block .filter-container > ul.tags {
+    display: none; }
   main .search-block .filter-container ul {
     list-style: none;
     margin: 0;
@@ -7710,12 +7716,105 @@ footer {
       display: none; }
     header .statistic-info ul li:nth-child(3) {
       display: none; }
+  main .search-block .filter-container div.zoen {
+    padding-bottom: 10px; }
+  main .search-block .filter-container .search-contrainer {
+    margin: 0 15px;
+    display: none; }
+  main .search-block .filter-container h1 {
+    display: block;
+    text-align: center;
+    margin-top: 0;
+    color: #242424;
+    font-family: 'Lato';
+    font-size: 24px;
+    /* Text style for "Mooie" */
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 28px;
+    margin-bottom: 16px; }
+    main .search-block .filter-container h1 span {
+      font-weight: 600; }
+  main .search-block .filter-container h2 {
+    display: block;
+    text-align: center;
+    letter-spacing: 0.6px;
+    margin-top: 13px;
+    color: #898989;
+    font-family: 'Lato';
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 23px;
+    padding: 0 15px;
+    line-height: 21px;
+    letter-spacing: 0.8px; }
+  main .search-block .filter-container h2.open-filter {
+    display: block;
+    border: 1px solid #edf0f5;
+    background-color: #ffffff;
+    line-height: 42px;
+    margin: 15px;
+    text-align: left;
+    color: #898989;
+    font-family: 'Lato';
+    font-size: 12px;
+    font-weight: 300; }
+    main .search-block .filter-container h2.open-filter .fa {
+      margin-top: 16px;
+      margin-bottom: 16px;
+      float: right; }
+  main .search-block .filter-container ul.tags {
+    display: block;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: block;
+    overflow: hidden;
+    margin-bottom: 30px;
+    padding: 0 15px; }
+    main .search-block .filter-container ul.tags li {
+      margin-right: 12px;
+      float: left;
+      display: inline-block;
+      border-radius: 15px;
+      border: 1px solid #edf0f5;
+      background-color: transparent;
+      color: #898989;
+      font-family: 'Lato';
+      font-size: 12px;
+      font-weight: 300;
+      line-height: 29px;
+      padding: 0 8.7px; }
+      main .search-block .filter-container ul.tags li .fa {
+        margin-left: 10px;
+        font-size: 10px; }
+    main .search-block .filter-container ul.tags li.delete-filters {
+      border: none;
+      padding: 0;
+      margin-right: 0; }
+      main .search-block .filter-container ul.tags li.delete-filters a {
+        color: #ed7a27;
+        font-family: 'Lato';
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 31px;
+        letter-spacing: 0.4px; }
+  main .search-block .result-container {
+    margin: 0 15px; }
+    main .search-block .result-container h1 {
+      display: none; }
+    main .search-block .result-container h2 {
+      display: none; }
+    main .search-block .result-container ul.tags {
+      display: none; }
   main .detail-map {
     text-align: center;
     background-color: #fff; }
     main .detail-map #map {
       width: 100%;
-      position: static; }
+      position: relative !important;
+      float: none;
+      height: 383px; }
     main .detail-map h1 {
       font-size: 24px;
       margin: 0;
@@ -7725,11 +7824,13 @@ footer {
       line-height: 21px;
       margin-top: 13px;
       margin-bottom: 16px; }
-    main .detail-map ul li {
-      font-size: 14px;
-      line-height: 24px;
-      letter-spacing: 0.6px;
-      padding: 0 15px; }
+    main .detail-map ul {
+      margin-bottom: 25px; }
+      main .detail-map ul li {
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.6px;
+        padding: 0 15px; }
   main .detail-info-hotel {
     padding-top: 26px;
     padding-bottom: 45px;
@@ -7752,7 +7853,7 @@ footer {
       font-weight: 300;
       line-height: 24px;
       letter-spacing: 0.5px;
-      padding: 0px 10px;
+      padding: 0 10px;
       text-align: center;
       margin-bottom: 42px; }
     main .detail-info-hotel ul {

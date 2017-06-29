@@ -13,6 +13,17 @@ jQuery(document).ready(function($) {
 
 
   });
+  $('.open-filter').click(function(event) {
+    if ($('.search-contrainer').css('display') == 'block') {
+      $('.search-contrainer').css('display', 'none');
+      $('.open-filter').removeClass('line-up');
+    } else {
+      $('.search-contrainer').css('display', 'block');
+      $('.open-filter').addClass('line-up');
+    }
+
+
+  });
   $('.navbar-toggle').click(function(event) {
 
     if ($(this).hasClass('collapsed')) {
