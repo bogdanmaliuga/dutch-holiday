@@ -194,6 +194,11 @@ img.mobile{
     li.mobile-nav{
       display: none;
     }
+    li.last-desktop{
+      a{
+        padding-right: 0;
+      }
+    }
     li {
       a {
         // padding: 14px 0 17px 35px;
@@ -232,6 +237,7 @@ img.mobile{
       }
 
       &:last-child {
+
         a {
           padding-right: 0;
         }
@@ -553,6 +559,9 @@ header {
 }
 
 main {
+  .detail-mobile-button{
+    display: none;
+  }
   .detail-top {
     padding-top: 175px;
     padding-bottom: 190px;

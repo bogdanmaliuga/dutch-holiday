@@ -5948,6 +5948,8 @@ img.mobile {
           background-color: transparent; }
     .navbar-default .navbar-nav li.mobile-nav {
       display: none; }
+    .navbar-default .navbar-nav li.last-desktop a {
+      padding-right: 0; }
     .navbar-default .navbar-nav li a {
       padding: 18px 18.5px 14px 17px;
       color: #242424;
@@ -6258,6 +6260,9 @@ header {
         font-size: 16px;
         color: white;
         margin-right: 10px; }
+
+main .detail-mobile-button {
+  display: none; }
 
 main .detail-top {
   padding-top: 175px;
@@ -7705,8 +7710,30 @@ footer {
       display: none; }
     header .statistic-info ul li:nth-child(3) {
       display: none; }
+  main .detail-map {
+    text-align: center;
+    background-color: #fff; }
+    main .detail-map #map {
+      width: 100%;
+      position: static; }
+    main .detail-map h1 {
+      font-size: 24px;
+      margin: 0;
+      letter-spacing: 1.1px; }
+    main .detail-map h2 {
+      font-size: 18px;
+      line-height: 21px;
+      margin-top: 13px;
+      margin-bottom: 16px; }
+    main .detail-map ul li {
+      font-size: 14px;
+      line-height: 24px;
+      letter-spacing: 0.6px;
+      padding: 0 15px; }
   main .detail-info-hotel {
-    padding-top: 26px; }
+    padding-top: 26px;
+    padding-bottom: 45px;
+    letter-spacing: 1.1px; }
     main .detail-info-hotel h1 {
       font-size: 24px;
       padding: 0 20px;
@@ -7727,7 +7754,7 @@ footer {
       letter-spacing: 0.5px;
       padding: 0px 10px;
       text-align: center;
-      margin-bottom: 10px; }
+      margin-bottom: 42px; }
     main .detail-info-hotel ul {
       margin: 0 -15px; }
       main .detail-info-hotel ul li {
@@ -7738,6 +7765,7 @@ footer {
         main .detail-info-hotel ul li img {
           min-height: 260px; }
   main .detail-mobile-button {
+    display: block;
     position: relative;
     text-align: center;
     padding: 98.5px 0; }
