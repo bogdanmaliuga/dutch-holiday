@@ -273,6 +273,7 @@
       margin: 3px 0;
 
       li {
+
         span {
           font-size: 14px;
           letter-spacing: 0.6px;
@@ -282,7 +283,10 @@
           font-size: 20px;
         }
       }
-
+      li:nth-child(1) {
+        width: 100%;
+        float:none;
+      }
       li:nth-child(2) {
         display: none;
       }
@@ -312,13 +316,19 @@
       }
 
       .outlinebtn {
-        margin-left: 4px;
+        // margin-left: 4px;
         margin-bottom: 10px;
         width: 189px;
-
+        &:last-child{
+          a{
+            .fa{
+              font-size: 17px;
+            }
+          }
+        }
         a {
           font-size: 12px;
-          padding: 22px 22px 23px;
+          padding: 22px 22px 22px;
           letter-spacing: 0.5px;
 
           .fa {
@@ -334,6 +344,7 @@
         margin: 3px 0;
 
         li {
+          line-height: 39px;
           span {
             font-size: 14px;
             letter-spacing: 0.6px;
@@ -343,7 +354,11 @@
             font-size: 20px;
           }
         }
-
+        li:nth-child(1) {
+          width: 100%;
+          float:none;
+          padding-right: 19px;
+        }
         li:nth-child(2) {
           display: none;
         }
@@ -357,6 +372,7 @@
 
   main {
     .search-block {
+      padding-bottom: 20px;
       .filter-container {
         div.zoen {
           padding-bottom: 10px;
@@ -411,10 +427,15 @@
           font-family: 'Lato';
           font-size: 12px;
           font-weight: 300;
+          padding-right: 10px;
+          padding-left: 10px;
+          letter-spacing: 0.5px;
+          margin-bottom: 27px;
 
           .fa {
-            margin-top: 16px;
-            margin-bottom: 16px;
+            font-size: 15px;
+            margin-top: 13.5px;
+            margin-bottom: 13.5px;
             float: right;
           }
         }
@@ -426,7 +447,7 @@
           list-style: none;
           display: block;
           overflow: hidden;
-          margin-bottom: 30px;
+          margin-bottom: 28px;
           padding: 0 15px;
 
           li {
@@ -467,7 +488,7 @@
       }
 
       .result-container {
-        margin:0 15px;
+        margin:0 13px;
         h1 {
           display: none;
         }
@@ -479,13 +500,58 @@
         ul.tags {
           display: none;
         }
+        .navigation{
+          display: none;
+          span{
+            display: none;
+          }
+        }
+        .navigation.mobile-navigation{
+          display: block;
+          text-align: center;
+          ul{
+            float: none;
+          }
+        }
+        .results-list{
+          .result-item{
+            &:hover{
+              .overlay{
+                height: 36px;
+              }
+            }
+            h3{
+              line-height: 36px;
+              text-align: center;
+              padding-left: 0;
+            }
+            .overlay{
+              height: 36px;
+            }
+            .price-block {
+              width: 96px;
+              height: 68px;
+              background-size: cover;
+              top: 13px;
+              right: 14px;
 
+              h4 {
+                font-size: 13px;
+                margin: 0;
+                padding: 0 3px;
+                margin-top: 22px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
       }
     }
 
     .detail-map {
       text-align: center;
       background-color: #fff;
+      margin-bottom: 0;
 
       #map {
         width: 100%;
@@ -788,6 +854,11 @@
               line-height: 16px;
             }
           }
+          &:hover{
+            .overlay{
+              height: 36px;
+            }
+          }
         }
       }
     }
@@ -799,7 +870,7 @@
       ul {
         li {
           margin-bottom: 26px;
-          width: 100%;
+          width: 100%!important;
 
           h3 {
             letter-spacing: 0.9px;
@@ -843,6 +914,7 @@
 
       .bottom-main-container {
         margin-bottom: 0;
+        padding-top: 21px;
       }
 
       h1 {
@@ -883,6 +955,9 @@
   }
 
   footer {
+    .social-buttons{
+      visibility: hidden;
+    }
     .footer-links {
       border-top: 1px solid #0e68a3;
       margin-top: 47px;

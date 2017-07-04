@@ -32,20 +32,21 @@ html {
   transition: transform 0.3s;
 }
 @mixin line-ellipses($lines, $line-height) {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: $lines;
-    line-height: $line-height;
-    max-height: $line-height * $lines;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: $lines;
+  line-height: $line-height;
+  max-height: $line-height * $lines;
 }
 
 .no-padding > [class*='col-'] {
   padding-right: 0;
   padding-left: 0;
 }
-img.mobile{
+
+img.mobile {
   display: none;
 }
 
@@ -98,48 +99,50 @@ img.mobile{
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   margin-bottom: 0;
+
   .menu-show {
-      transition: all 0.3s linear;
+    transition: all 0.3s linear;
 
+    .icon-bar {
+      transition: 300ms ease-in-out;
+      background-color: #fff;
+      position: relative;
+      width: 22px;
+      height: 4px;
+    }
+
+    .icon-bar:last-child {
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+      -o-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: -8px;
+    }
+
+    .icon-bar:nth-child(2) {
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      -o-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 8px;
+    }
+
+    .icon-bar:nth-child(3) {
+      opacity: 0;
+    }
+
+    &.collapsed {
       .icon-bar {
-          transition: 300ms ease-in-out;
-          background-color: #fff;
-          position: relative;
-          width: 22px;
-          height: 4px;
+        -webkit-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        transform: rotate(0deg);
+        top: 0;
+        opacity: 1;
       }
-
-      .icon-bar:last-child {
-          -webkit-transform: rotate(-45deg);
-          -ms-transform: rotate(-45deg);
-          -o-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-          top: -8px;
-      }
-
-      .icon-bar:nth-child(2) {
-          -webkit-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-          -o-transform: rotate(45deg);
-          transform: rotate(45deg);
-          top: 8px;
-      }
-
-      .icon-bar:nth-child(3) {
-          opacity: 0;
-      }
-
-      &.collapsed {
-          .icon-bar {
-              -webkit-transform: rotate(0deg);
-              -ms-transform: rotate(0deg);
-              -o-transform: rotate(0deg);
-              transform: rotate(0deg);
-              top: 0;
-              opacity: 1;
-          }
-      }
+    }
   }
+
   .navbar-nav {
     margin-top: 23px;
     margin-bottom: 23px;
@@ -155,8 +158,8 @@ img.mobile{
     li.dropdown.open {
       > a {
         // color: white !important;
-        border-top-right-radius: 4px;
-        border-top-left-radius: 4px;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px;
         @include linearGradient(#006099, #0e68a3);
         color: white;
         padding-left: 18px;
@@ -178,7 +181,9 @@ img.mobile{
         border: 0;
         left: 0;
         right: auto;
-        border-top-right-radius: 4px;
+        border-top-right-radius: 8px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
 
         li {
           a {
@@ -191,14 +196,17 @@ img.mobile{
         }
       }
     }
-    li.mobile-nav{
+
+    li.mobile-nav {
       display: none;
     }
-    li.last-desktop{
-      a{
+
+    li.last-desktop {
+      a {
         padding-right: 0;
       }
     }
+
     li {
       a {
         // padding: 14px 0 17px 35px;
@@ -237,7 +245,6 @@ img.mobile{
       }
 
       &:last-child {
-
         a {
           padding-right: 0;
         }
@@ -270,8 +277,8 @@ header {
     border-radius: 50px;
     position: relative;
     z-index: 3;
-    margin-top: 123px;
-    margin-bottom: 204px;
+    margin-top: 103px;
+    margin-bottom: 205px;
     padding: 75px 0;
 
     &:before {
@@ -294,6 +301,7 @@ header {
       font-family: 'Lato';
       font-size: 48px;
       font-weight: 300;
+      letter-spacing: 1px;
 
       span {
         font-weight: 600;
@@ -306,7 +314,9 @@ header {
       font-family: 'Lato';
       font-size: 21px;
       font-weight: 300;
-      margin-bottom: 55px;
+      margin-bottom: 57px;
+      margin-top: 18px;
+      letter-spacing: 0.5px;
     }
 
     .outlinebtn {
@@ -314,6 +324,7 @@ header {
       border-radius: 39px;
       vertical-align: middle;
       transition: all 0.3s linear;
+      margin: 0 6px;
 
       a {
         color: #242424;
@@ -330,8 +341,9 @@ header {
         text-overflow: ellipsis;
         // background-color: white;
         border: none;
-        padding: 19px 35px;
+        padding: 28px 30px;
         border-radius: 39px;
+        letter-spacing: 0.7px;
         cursor: pointer;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -342,6 +354,16 @@ header {
           transition: all 0.3s linear;
           color: #242424;
           margin-left: 9px;
+        }
+      }
+
+      &:last-child {
+        a {
+          max-width: 244px;
+        }
+
+        .fa {
+          font-size: 22px;
         }
       }
 
@@ -381,19 +403,46 @@ header {
       overflow: hidden;
       padding: 0;
       text-align: center;
+      margin-top: 23px;
 
       li {
         display: inline-block;
-        // float: left;
-        line-height: 39px;
+        float: left;
+        line-height: 36px;
+        width: 37%;
+
+        &:nth-child(1) {
+          text-align: right;
+          padding-right: 10px;
+
+          .fa {
+            font-size: 22px;
+            margin-right: 8px;
+          }
+        }
 
         &:nth-child(2) {
           border-left: 1px solid rgba(255,255,255,0.1);
           border-right: 1px solid rgba(255,255,255,0.1);
-          margin-left: 22px;
-          margin-right: 40px;
-          padding-left: 39px;
-          padding-right: 39px;
+          // margin-left: 22px;
+          // margin-right: 40px;
+          // padding-left: 39px;
+          // padding-right: 39px;
+          .fa {
+            font-size: 19px;
+            margin-right: 8px;
+          }
+          width: 26%;
+        }
+
+        &:nth-child(3) {
+          text-align: left;
+          padding-left: 35px;
+
+          .fa {
+            font-size: 19px;
+            margin-right: 8px;
+          }
         }
 
         span {
@@ -559,9 +608,10 @@ header {
 }
 
 main {
-  .detail-mobile-button{
+  .detail-mobile-button {
     display: none;
   }
+
   .detail-top {
     padding-top: 175px;
     padding-bottom: 190px;
@@ -573,7 +623,6 @@ main {
       position: absolute;
       background-color: #555555;
       @include linearGradient(#063f76,#f39d29);
-
       opacity: 0.35;
       left: 0;
       top: 0;
@@ -868,15 +917,18 @@ main {
     //   display: flex;
     // }
     .filter-container {
-      >h1{
+      > h1 {
         display: none;
       }
-      >h2{
+
+      > h2 {
         display: none;
       }
-      >ul.tags{
+
+      > ul.tags {
         display: none;
       }
+
       ul {
         list-style: none;
         margin: 0;
@@ -902,16 +954,17 @@ main {
 
         ul.zoen-item {
           margin-bottom: 13px;
-          h5.zoen-title.line-up{
+
+          h5.zoen-title.line-up {
             &:after {
-                // content: "\f106";
-                -moz-transition: all 0.3s linear;
-                -webkit-transition: all 0.3s linear;
-                transition: all 0.3s linear;
-                -ms-transform:rotate(180deg);
-                -moz-transform:rotate(180deg);
-                -webkit-transform:rotate(180deg);
-                transform:rotate(180deg);
+              // content: "\f106";
+              -moz-transition: all 0.3s linear;
+              -webkit-transition: all 0.3s linear;
+              transition: all 0.3s linear;
+              -ms-transform: rotate(180deg);
+              -moz-transform: rotate(180deg);
+              -webkit-transform: rotate(180deg);
+              transform: rotate(180deg);
             }
           }
 
@@ -923,11 +976,12 @@ main {
             line-height: 45px;
             /* Text style for "Landen" */
             color: #242424;
-            font-weight: 600;
+            font-weight: 500;
             margin-bottom: 0;
-            &:after{
+
+            &:after {
               font: normal normal normal 14px/1 FontAwesome;
-              content: "\f106";
+              content: "\f107";
               width: 12px;
               margin-right: 25px;
               margin-top: 18px;
@@ -941,10 +995,12 @@ main {
               -webkit-transition: all 0.3s linear;
               transition: all 0.3s linear;
             }
-            &:hover{
+
+            &:hover {
               cursor: pointer;
             }
-            .fa{
+
+            .fa {
               float: right;
               line-height: 45px;
               margin-right: 27px;
@@ -953,15 +1009,15 @@ main {
           }
 
           li {
-            &:first-child{
-                border-top: 1px solid #edf0f5;
+            &:first-child {
+              border-top: 1px solid #edf0f5;
             }
             border-bottom: 1px solid #edf0f5;
             padding-left: 20px;
             padding-right: 14px;
 
             span.count {
-              margin:11.5px 0;
+              margin: 11.5px 0;
               float: right;
               color: #ed7a27;
               font-family: 'Lato';
@@ -977,7 +1033,6 @@ main {
               background-color: rgba(0, 0, 0, 0);
               min-width: 34px;
               text-align: center;
-
             }
 
             label {
@@ -1044,7 +1099,7 @@ main {
           color: #242424;
           font-family: 'Lato';
           font-size: 18px;
-          font-weight: 700;
+          font-weight: 500;
           line-height: 44px;
           letter-spacing: 0.5px;
         }
@@ -1156,7 +1211,9 @@ main {
           }
         }
       }
-
+      .navigation.mobile-navigation{
+        display: none;
+      }
       .navigation {
         text-align: right;
         overflow: hidden;
@@ -1354,7 +1411,7 @@ main {
   }
 
   .top-main {
-    padding-top: 53px;
+    padding-top: 46px;
     background-color: white;
     text-align: center;
 
@@ -1364,6 +1421,7 @@ main {
       font-size: 48px;
       /* Text style for "Mooie" */
       font-weight: 300;
+      letter-spacing: 1.8px;
 
       span {
         font-weight: 600;
@@ -1375,6 +1433,9 @@ main {
       font-size: 24px;
       font-weight: 300;
       margin-bottom: 45px;
+      color: #898989;
+      margin-top: 12px;
+      letter-spacing: 0.6px;
     }
 
     ul.row-hotels {
@@ -1512,6 +1573,7 @@ main {
           padding-left: 19px;
           line-height: 50px;
           text-align: left;
+          letter-spacing: 0.4px;
         }
       }
     }
@@ -1521,15 +1583,15 @@ main {
       font-family: 'Lato';
       font-size: 14px;
       font-weight: 300;
-      padding-top: 30px;
-      padding-top: 30px;
+      padding-top: 16px;
       display: inline-block;
-      padding-bottom: 48px;
+      padding-bottom: 38px;
+      letter-spacing: 0.5px;
 
       i {
         font-size: 14px;
         color: #898989;
-        margin-left: 10px;
+        margin-left: 5px;
         vertical-align: middle;
         line-height: 17px;
       }
@@ -1558,6 +1620,7 @@ main {
       font-size: 48px;
       /* Text style for "Waarom , ?" */
       font-weight: 300;
+      letter-spacing: 2.2px;
 
       span {
         font-weight: 600;
@@ -1569,7 +1632,9 @@ main {
       font-family: 'Lato';
       font-size: 24px;
       font-weight: 300;
-      margin-bottom: 44px;
+      margin-bottom: 35px;
+      margin-top: 12px;
+      letter-spacing: 0.6px;
     }
 
     p {
@@ -1579,7 +1644,8 @@ main {
       font-size: 16px;
       font-weight: 300;
       line-height: 32px;
-      margin-bottom: 47px;
+      margin-bottom: 30px;
+      letter-spacing: 0.4px;
     }
 
     .outlinebtn {
@@ -1588,11 +1654,13 @@ main {
       border-radius: 100px;
       vertical-align: middle;
       transition: all 0.3s linear;
-      margin-top: 8px;
+      margin: 0 5px;
       margin-bottom: 75px;
+        margin-top: 10px;
       @include linearGradient(#063f76, #0e68a3);
 
       a {
+        letter-spacing: 0.7px;
         color: #063f76;
         font-family: 'Lato';
         font-size: 16px;
@@ -1608,7 +1676,7 @@ main {
         text-overflow: ellipsis;
         background-color: white;
         border: none;
-        padding: 29px 49.5px;
+        padding: 27px 30px;
         border-radius: 100px;
         cursor: pointer;
         -webkit-appearance: none;
@@ -1653,9 +1721,10 @@ main {
       font-size: 48px;
       /* Text style for "Waarom , ?" */
       font-weight: 300;
-      margin-bottom: 36px;
-      margin-top: 73px;
+      margin-bottom: 31px;
+      margin-top: 68px;
       line-height: 45px;
+      letter-spacing: 2.4px;
 
       span {
         font-weight: 600;
@@ -1669,7 +1738,7 @@ main {
       vertical-align: middle;
       transition: all 0.3s linear;
       margin-top: 8px;
-      margin-bottom: 75px;
+      margin-bottom: 73px;
       @include linearGradient(#ed7a27, #f39d29);
 
       a {
@@ -1688,11 +1757,12 @@ main {
         text-overflow: ellipsis;
         background-color: white;
         border: none;
-        padding: 29px 36.5px;
+        padding: 29px 30px;
         border-radius: 100px;
         cursor: pointer;
         -webkit-appearance: none;
         -moz-appearance: none;
+        letter-spacing: 0.7px;
         transition: all 0.3s linear;
 
         .fa {
@@ -1724,7 +1794,7 @@ main {
 
   .stars {
     padding-top: 100px;
-    padding-bottom: 97px;
+    padding-bottom: 94px;
 
     ul {
       list-style: none;
@@ -1734,10 +1804,15 @@ main {
       li {
         padding: 0 6px;
         display: inline-block;
-        width: 33.33%;
+        width: 37%;
         float: left;
         text-align: center;
-
+        &:first-child{
+          width: 31.5%;
+        }
+        &:last-child{
+          width: 31.5%;
+        }
         .star {
           border-radius: 100px;
           background-color: yellow;
@@ -1760,6 +1835,9 @@ main {
           font-size: 18px;
           font-weight: 700;
           margin-bottom: 15px;
+          margin-bottom: 7px;
+        letter-spacing: 1px;
+        margin-top: 28px;
         }
 
         p {
@@ -1767,6 +1845,7 @@ main {
           font-family: 'Lato';
           font-size: 16px;
           font-weight: 300;
+          letter-spacing: 0.7px;
           line-height: 24px;
         }
       }
@@ -1783,7 +1862,7 @@ footer {
       position: absolute;
       bottom: -25px;
       z-index: 20;
-      left: calc(50% - 145px);
+      left: calc(50% - 147px);
 
       .social-item {
         display: inline-block;
@@ -1850,13 +1929,13 @@ footer {
       overflow: hidden;
       display: inline-block;
       padding-top: 58px;
-    margin-right: 108px;
+      margin-right: 108px;
 
       img {
         width: 108px;
         height: 145px;
         float: left;
-        margin-right: 28px
+        margin-right: 28px;
       }
 
       .work-info {
@@ -1870,7 +1949,7 @@ footer {
           font-size: 18px;
           font-weight: 700;
           margin-top: 18px;
-    letter-spacing: 0.95px;
+          letter-spacing: 0.95px;
           margin-bottom: 8px;
         }
 
@@ -1931,15 +2010,14 @@ footer {
       span.tel {
         .fa {
           padding-right: 22px;
-    font-size: 18px;
+          font-size: 18px;
         }
       }
 
       span.email {
         .fa {
-
           padding-right: 14px;
-font-size: 21px;
+          font-size: 21px;
         }
       }
     }
@@ -1948,12 +2026,15 @@ font-size: 21px;
       list-style: none;
       margin: 0;
       padding: 0;
-        li.disable-desktop{
-          display: none;
-        }
-        li.disable-mobile{
-          display: block;
-        }
+
+      li.disable-desktop {
+        display: none;
+      }
+
+      li.disable-mobile {
+        display: block;
+      }
+
       li.empty {
         a {
           color: transparent;
@@ -2019,7 +2100,7 @@ font-size: 21px;
       font-weight: 300;
       line-height: 32px;
       line-height: 26px;
-letter-spacing: 0.3px;
+      letter-spacing: 0.3px;
     }
 
     ul {

@@ -5900,8 +5900,8 @@ img.mobile {
     .navbar-default .navbar-nav li.dropdown > a .fa {
       padding-left: 9px; }
     .navbar-default .navbar-nav li.dropdown.open > a {
-      border-top-right-radius: 4px;
-      border-top-left-radius: 4px;
+      border-top-right-radius: 8px;
+      border-top-left-radius: 8px;
       background: #006099;
       /* Old browsers */
       background: -moz-linear-gradient(top, #006099 0%, #0e68a3 100%);
@@ -5941,7 +5941,9 @@ img.mobile {
       border: 0;
       left: 0;
       right: auto;
-      border-top-right-radius: 4px; }
+      border-top-right-radius: 8px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px; }
       .navbar-default .navbar-nav li.dropdown.open ul.dropdown-menu li a {
         color: white; }
         .navbar-default .navbar-nav li.dropdown.open ul.dropdown-menu li a:hover {
@@ -6001,8 +6003,8 @@ header {
     border-radius: 50px;
     position: relative;
     z-index: 3;
-    margin-top: 123px;
-    margin-bottom: 204px;
+    margin-top: 103px;
+    margin-bottom: 205px;
     padding: 75px 0; }
     header .blur-text:before {
       content: '';
@@ -6021,7 +6023,8 @@ header {
       color: #f9fafe;
       font-family: 'Lato';
       font-size: 48px;
-      font-weight: 300; }
+      font-weight: 300;
+      letter-spacing: 1px; }
       header .blur-text h1 span {
         font-weight: 600; }
     header .blur-text h2 {
@@ -6030,12 +6033,15 @@ header {
       font-family: 'Lato';
       font-size: 21px;
       font-weight: 300;
-      margin-bottom: 55px; }
+      margin-bottom: 57px;
+      margin-top: 18px;
+      letter-spacing: 0.5px; }
     header .blur-text .outlinebtn {
       display: inline-block;
       border-radius: 39px;
       vertical-align: middle;
-      transition: all 0.3s linear; }
+      transition: all 0.3s linear;
+      margin: 0 6px; }
       header .blur-text .outlinebtn a {
         color: #242424;
         font-family: 'Lato';
@@ -6050,8 +6056,9 @@ header {
         height: 100%;
         text-overflow: ellipsis;
         border: none;
-        padding: 19px 35px;
+        padding: 28px 30px;
         border-radius: 39px;
+        letter-spacing: 0.7px;
         cursor: pointer;
         -webkit-appearance: none;
         -moz-appearance: none;
@@ -6074,6 +6081,10 @@ header {
           transition: all 0.3s linear;
           color: #242424;
           margin-left: 9px; }
+      header .blur-text .outlinebtn:last-child a {
+        max-width: 244px; }
+      header .blur-text .outlinebtn:last-child .fa {
+        font-size: 22px; }
       header .blur-text .outlinebtn:hover {
         color: #fff;
         background: #ed7a27;
@@ -6126,17 +6137,32 @@ header {
       margin: 20px 0;
       overflow: hidden;
       padding: 0;
-      text-align: center; }
+      text-align: center;
+      margin-top: 23px; }
       header .statistic-info ul li {
         display: inline-block;
-        line-height: 39px; }
+        float: left;
+        line-height: 36px;
+        width: 37%; }
+        header .statistic-info ul li:nth-child(1) {
+          text-align: right;
+          padding-right: 10px; }
+          header .statistic-info ul li:nth-child(1) .fa {
+            font-size: 22px;
+            margin-right: 8px; }
         header .statistic-info ul li:nth-child(2) {
           border-left: 1px solid rgba(255, 255, 255, 0.1);
           border-right: 1px solid rgba(255, 255, 255, 0.1);
-          margin-left: 22px;
-          margin-right: 40px;
-          padding-left: 39px;
-          padding-right: 39px; }
+          width: 26%; }
+          header .statistic-info ul li:nth-child(2) .fa {
+            font-size: 19px;
+            margin-right: 8px; }
+        header .statistic-info ul li:nth-child(3) {
+          text-align: left;
+          padding-left: 35px; }
+          header .statistic-info ul li:nth-child(3) .fa {
+            font-size: 19px;
+            margin-right: 8px; }
         header .statistic-info ul li span {
           color: #f9fafe;
           font-family: 'Lato';
@@ -6574,11 +6600,11 @@ main .search-block {
         line-height: 45px;
         /* Text style for "Landen" */
         color: #242424;
-        font-weight: 600;
+        font-weight: 500;
         margin-bottom: 0; }
         main .search-block .filter-container div.zoen ul.zoen-item h5.zoen-title:after {
           font: normal normal normal 14px/1 FontAwesome;
-          content: "\f106";
+          content: "\f107";
           width: 12px;
           margin-right: 25px;
           margin-top: 18px;
@@ -6670,7 +6696,7 @@ main .search-block {
       color: #242424;
       font-family: 'Lato';
       font-size: 18px;
-      font-weight: 700;
+      font-weight: 500;
       line-height: 44px;
       letter-spacing: 0.5px; }
     main .search-block .filter-container ul.cat li {
@@ -6752,6 +6778,8 @@ main .search-block {
         font-weight: 700;
         line-height: 31px;
         letter-spacing: 0.4px; }
+  main .search-block .result-container .navigation.mobile-navigation {
+    display: none; }
   main .search-block .result-container .navigation {
     text-align: right;
     overflow: hidden; }
@@ -6912,7 +6940,7 @@ main .search-block {
       text-align: left; }
 
 main .top-main {
-  padding-top: 53px;
+  padding-top: 46px;
   background-color: white;
   text-align: center; }
   main .top-main h1 {
@@ -6920,14 +6948,18 @@ main .top-main {
     font-family: 'Lato';
     font-size: 48px;
     /* Text style for "Mooie" */
-    font-weight: 300; }
+    font-weight: 300;
+    letter-spacing: 1.8px; }
     main .top-main h1 span {
       font-weight: 600; }
   main .top-main h2 {
     font-family: 'Lato';
     font-size: 24px;
     font-weight: 300;
-    margin-bottom: 45px; }
+    margin-bottom: 45px;
+    color: #898989;
+    margin-top: 12px;
+    letter-spacing: 0.6px; }
   main .top-main ul.row-hotels {
     list-style: none;
     padding: 0;
@@ -7035,20 +7067,21 @@ main .top-main {
         margin: 0;
         padding-left: 19px;
         line-height: 50px;
-        text-align: left; }
+        text-align: left;
+        letter-spacing: 0.4px; }
   main .top-main a.lees-hotels {
     color: #898989;
     font-family: 'Lato';
     font-size: 14px;
     font-weight: 300;
-    padding-top: 30px;
-    padding-top: 30px;
+    padding-top: 16px;
     display: inline-block;
-    padding-bottom: 48px; }
+    padding-bottom: 38px;
+    letter-spacing: 0.5px; }
     main .top-main a.lees-hotels i {
       font-size: 14px;
       color: #898989;
-      margin-left: 10px;
+      margin-left: 5px;
       vertical-align: middle;
       line-height: 17px; }
     main .top-main a.lees-hotels:hover {
@@ -7068,7 +7101,8 @@ main .bottom-main {
     font-family: 'Lato';
     font-size: 48px;
     /* Text style for "Waarom , ?" */
-    font-weight: 300; }
+    font-weight: 300;
+    letter-spacing: 2.2px; }
     main .bottom-main h1 span {
       font-weight: 600; }
   main .bottom-main h2 {
@@ -7076,7 +7110,9 @@ main .bottom-main {
     font-family: 'Lato';
     font-size: 24px;
     font-weight: 300;
-    margin-bottom: 44px; }
+    margin-bottom: 35px;
+    margin-top: 12px;
+    letter-spacing: 0.6px; }
   main .bottom-main p {
     padding: 0 108px;
     color: #898989;
@@ -7084,15 +7120,17 @@ main .bottom-main {
     font-size: 16px;
     font-weight: 300;
     line-height: 32px;
-    margin-bottom: 47px; }
+    margin-bottom: 30px;
+    letter-spacing: 0.4px; }
   main .bottom-main .outlinebtn {
     display: inline-block;
     padding: 2px;
     border-radius: 100px;
     vertical-align: middle;
     transition: all 0.3s linear;
-    margin-top: 8px;
+    margin: 0 5px;
     margin-bottom: 75px;
+    margin-top: 10px;
     background: #063f76;
     /* Old browsers */
     background: -moz-linear-gradient(top, #063f76 0%, #0e68a3 100%);
@@ -7108,6 +7146,7 @@ main .bottom-main {
     background: linear-gradient(to top, #063f76 0%, #0e68a3 100%);
     /* W3C */ }
     main .bottom-main .outlinebtn a {
+      letter-spacing: 0.7px;
       color: #063f76;
       font-family: 'Lato';
       font-size: 16px;
@@ -7123,7 +7162,7 @@ main .bottom-main {
       text-overflow: ellipsis;
       background-color: white;
       border: none;
-      padding: 29px 49.5px;
+      padding: 27px 30px;
       border-radius: 100px;
       cursor: pointer;
       -webkit-appearance: none;
@@ -7169,9 +7208,10 @@ main .additional-main {
     font-size: 48px;
     /* Text style for "Waarom , ?" */
     font-weight: 300;
-    margin-bottom: 36px;
-    margin-top: 73px;
-    line-height: 45px; }
+    margin-bottom: 31px;
+    margin-top: 68px;
+    line-height: 45px;
+    letter-spacing: 2.4px; }
     main .additional-main h1 span {
       font-weight: 600; }
   main .additional-main .outlinebtn {
@@ -7181,7 +7221,7 @@ main .additional-main {
     vertical-align: middle;
     transition: all 0.3s linear;
     margin-top: 8px;
-    margin-bottom: 75px;
+    margin-bottom: 73px;
     background: #ed7a27;
     /* Old browsers */
     background: -moz-linear-gradient(top, #ed7a27 0%, #f39d29 100%);
@@ -7212,11 +7252,12 @@ main .additional-main {
       text-overflow: ellipsis;
       background-color: white;
       border: none;
-      padding: 29px 36.5px;
+      padding: 29px 30px;
       border-radius: 100px;
       cursor: pointer;
       -webkit-appearance: none;
       -moz-appearance: none;
+      letter-spacing: 0.7px;
       transition: all 0.3s linear; }
       main .additional-main .outlinebtn a .fa {
         transition: all 0.3s linear;
@@ -7250,7 +7291,7 @@ main .additional-main {
 
 main .stars {
   padding-top: 100px;
-  padding-bottom: 97px; }
+  padding-bottom: 94px; }
   main .stars ul {
     list-style: none;
     margin: 0;
@@ -7258,9 +7299,13 @@ main .stars {
     main .stars ul li {
       padding: 0 6px;
       display: inline-block;
-      width: 33.33%;
+      width: 37%;
       float: left;
       text-align: center; }
+      main .stars ul li:first-child {
+        width: 31.5%; }
+      main .stars ul li:last-child {
+        width: 31.5%; }
       main .stars ul li .star {
         border-radius: 100px;
         background-color: yellow;
@@ -7291,12 +7336,16 @@ main .stars {
         font-family: 'Lato';
         font-size: 18px;
         font-weight: 700;
-        margin-bottom: 15px; }
+        margin-bottom: 15px;
+        margin-bottom: 7px;
+        letter-spacing: 1px;
+        margin-top: 28px; }
       main .stars ul li p {
         color: #8a8a8a;
         font-family: 'Lato';
         font-size: 16px;
         font-weight: 300;
+        letter-spacing: 0.7px;
         line-height: 24px; }
 
 footer {
@@ -7319,7 +7368,7 @@ footer {
     position: absolute;
     bottom: -25px;
     z-index: 20;
-    left: calc(50% - 145px); }
+    left: calc(50% - 147px); }
     footer .social-buttons .social-block .social-item {
       display: inline-block;
       position: relative;
@@ -7680,6 +7729,9 @@ footer {
       letter-spacing: 0.6px; }
     .statistic-info-detail ul li .fa {
       font-size: 20px; }
+    .statistic-info-detail ul li:nth-child(1) {
+      width: 100%;
+      float: none; }
     .statistic-info-detail ul li:nth-child(2) {
       display: none; }
     .statistic-info-detail ul li:nth-child(3) {
@@ -7695,121 +7747,165 @@ footer {
     header .blur-text:before {
       display: none; }
     header .blur-text .outlinebtn {
-      margin-left: 4px;
       margin-bottom: 10px;
       width: 189px; }
+      header .blur-text .outlinebtn:last-child a .fa {
+        font-size: 17px; }
       header .blur-text .outlinebtn a {
         font-size: 12px;
-        padding: 22px 22px 23px;
+        padding: 22px 22px 22px;
         letter-spacing: 0.5px; }
         header .blur-text .outlinebtn a .fa {
           margin-left: 12px;
           font-size: 16px; }
   header .statistic-info ul {
     margin: 3px 0; }
-    header .statistic-info ul li span {
-      font-size: 14px;
-      letter-spacing: 0.6px; }
-    header .statistic-info ul li .fa {
-      font-size: 20px; }
+    header .statistic-info ul li {
+      line-height: 39px; }
+      header .statistic-info ul li span {
+        font-size: 14px;
+        letter-spacing: 0.6px; }
+      header .statistic-info ul li .fa {
+        font-size: 20px; }
+    header .statistic-info ul li:nth-child(1) {
+      width: 100%;
+      float: none;
+      padding-right: 19px; }
     header .statistic-info ul li:nth-child(2) {
       display: none; }
     header .statistic-info ul li:nth-child(3) {
       display: none; }
-  main .search-block .filter-container div.zoen {
-    padding-bottom: 10px; }
-  main .search-block .filter-container .search-contrainer {
-    margin: 0 15px;
-    display: none; }
-  main .search-block .filter-container h1 {
-    display: block;
-    text-align: center;
-    margin-top: 0;
-    color: #242424;
-    font-family: 'Lato';
-    font-size: 24px;
-    /* Text style for "Mooie" */
-    font-weight: 300;
-    letter-spacing: 1px;
-    line-height: 28px;
-    margin-bottom: 16px; }
-    main .search-block .filter-container h1 span {
-      font-weight: 600; }
-  main .search-block .filter-container h2 {
-    display: block;
-    text-align: center;
-    letter-spacing: 0.6px;
-    margin-top: 13px;
-    color: #898989;
-    font-family: 'Lato';
-    font-size: 18px;
-    font-weight: 300;
-    margin-bottom: 23px;
-    padding: 0 15px;
-    line-height: 21px;
-    letter-spacing: 0.8px; }
-  main .search-block .filter-container h2.open-filter {
-    display: block;
-    border: 1px solid #edf0f5;
-    background-color: #ffffff;
-    line-height: 42px;
-    margin: 15px;
-    text-align: left;
-    color: #898989;
-    font-family: 'Lato';
-    font-size: 12px;
-    font-weight: 300; }
-    main .search-block .filter-container h2.open-filter .fa {
-      margin-top: 16px;
-      margin-bottom: 16px;
-      float: right; }
-  main .search-block .filter-container ul.tags {
-    display: block;
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: block;
-    overflow: hidden;
-    margin-bottom: 30px;
-    padding: 0 15px; }
-    main .search-block .filter-container ul.tags li {
-      margin-right: 12px;
-      float: left;
-      display: inline-block;
-      border-radius: 15px;
+  main .search-block {
+    padding-bottom: 20px; }
+    main .search-block .filter-container div.zoen {
+      padding-bottom: 10px; }
+    main .search-block .filter-container .search-contrainer {
+      margin: 0 15px;
+      display: none; }
+    main .search-block .filter-container h1 {
+      display: block;
+      text-align: center;
+      margin-top: 0;
+      color: #242424;
+      font-family: 'Lato';
+      font-size: 24px;
+      /* Text style for "Mooie" */
+      font-weight: 300;
+      letter-spacing: 1px;
+      line-height: 28px;
+      margin-bottom: 16px; }
+      main .search-block .filter-container h1 span {
+        font-weight: 600; }
+    main .search-block .filter-container h2 {
+      display: block;
+      text-align: center;
+      letter-spacing: 0.6px;
+      margin-top: 13px;
+      color: #898989;
+      font-family: 'Lato';
+      font-size: 18px;
+      font-weight: 300;
+      margin-bottom: 23px;
+      padding: 0 15px;
+      line-height: 21px;
+      letter-spacing: 0.8px; }
+    main .search-block .filter-container h2.open-filter {
+      display: block;
       border: 1px solid #edf0f5;
-      background-color: transparent;
+      background-color: #ffffff;
+      line-height: 42px;
+      margin: 15px;
+      text-align: left;
       color: #898989;
       font-family: 'Lato';
       font-size: 12px;
       font-weight: 300;
-      line-height: 29px;
-      padding: 0 8.7px; }
-      main .search-block .filter-container ul.tags li .fa {
-        margin-left: 10px;
-        font-size: 10px; }
-    main .search-block .filter-container ul.tags li.delete-filters {
-      border: none;
+      padding-right: 10px;
+      padding-left: 10px;
+      letter-spacing: 0.5px;
+      margin-bottom: 27px; }
+      main .search-block .filter-container h2.open-filter .fa {
+        font-size: 15px;
+        margin-top: 13.5px;
+        margin-bottom: 13.5px;
+        float: right; }
+    main .search-block .filter-container ul.tags {
+      display: block;
       padding: 0;
-      margin-right: 0; }
-      main .search-block .filter-container ul.tags li.delete-filters a {
-        color: #ed7a27;
+      margin: 0;
+      list-style: none;
+      display: block;
+      overflow: hidden;
+      margin-bottom: 28px;
+      padding: 0 15px; }
+      main .search-block .filter-container ul.tags li {
+        margin-right: 12px;
+        float: left;
+        display: inline-block;
+        border-radius: 15px;
+        border: 1px solid #edf0f5;
+        background-color: transparent;
+        color: #898989;
         font-family: 'Lato';
         font-size: 12px;
-        font-weight: 700;
-        line-height: 31px;
-        letter-spacing: 0.4px; }
-  main .search-block .result-container {
-    margin: 0 15px; }
-    main .search-block .result-container h1 {
-      display: none; }
-    main .search-block .result-container h2 {
-      display: none; }
-    main .search-block .result-container ul.tags {
-      display: none; }
+        font-weight: 300;
+        line-height: 29px;
+        padding: 0 8.7px; }
+        main .search-block .filter-container ul.tags li .fa {
+          margin-left: 10px;
+          font-size: 10px; }
+      main .search-block .filter-container ul.tags li.delete-filters {
+        border: none;
+        padding: 0;
+        margin-right: 0; }
+        main .search-block .filter-container ul.tags li.delete-filters a {
+          color: #ed7a27;
+          font-family: 'Lato';
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 31px;
+          letter-spacing: 0.4px; }
+    main .search-block .result-container {
+      margin: 0 13px; }
+      main .search-block .result-container h1 {
+        display: none; }
+      main .search-block .result-container h2 {
+        display: none; }
+      main .search-block .result-container ul.tags {
+        display: none; }
+      main .search-block .result-container .navigation {
+        display: none; }
+        main .search-block .result-container .navigation span {
+          display: none; }
+      main .search-block .result-container .navigation.mobile-navigation {
+        display: block;
+        text-align: center; }
+        main .search-block .result-container .navigation.mobile-navigation ul {
+          float: none; }
+      main .search-block .result-container .results-list .result-item:hover .overlay {
+        height: 36px; }
+      main .search-block .result-container .results-list .result-item h3 {
+        line-height: 36px;
+        text-align: center;
+        padding-left: 0; }
+      main .search-block .result-container .results-list .result-item .overlay {
+        height: 36px; }
+      main .search-block .result-container .results-list .result-item .price-block {
+        width: 96px;
+        height: 68px;
+        background-size: cover;
+        top: 13px;
+        right: 14px; }
+        main .search-block .result-container .results-list .result-item .price-block h4 {
+          font-size: 13px;
+          margin: 0;
+          padding: 0 3px;
+          margin-top: 22px;
+          line-height: 16px; }
   main .detail-map {
     text-align: center;
-    background-color: #fff; }
+    background-color: #fff;
+    margin-bottom: 0; }
     main .detail-map #map {
       width: 100%;
       position: relative !important;
@@ -8058,12 +8154,14 @@ footer {
             padding: 0 3px;
             margin-top: 22px;
             line-height: 16px; }
+        main .top-main ul.row-hotels li:hover .overlay {
+          height: 36px; }
   main .stars {
     padding-top: 54px;
     padding-bottom: 12px; }
     main .stars ul li {
       margin-bottom: 26px;
-      width: 100%; }
+      width: 100% !important; }
       main .stars ul li h3 {
         letter-spacing: 0.9px;
         margin-bottom: 9px; }
@@ -8095,7 +8193,8 @@ footer {
   main .bottom-main {
     padding-bottom: 55px; }
     main .bottom-main .bottom-main-container {
-      margin-bottom: 0; }
+      margin-bottom: 0;
+      padding-top: 21px; }
     main .bottom-main h1 {
       margin-top: 16px;
       letter-spacing: 1px;
@@ -8121,6 +8220,8 @@ footer {
         letter-spacing: 0.5px;
         font-size: 12px;
         width: 189px; }
+  footer .social-buttons {
+    visibility: hidden; }
   footer .footer-links {
     border-top: 1px solid #0e68a3;
     margin-top: 47px; }
