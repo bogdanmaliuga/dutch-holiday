@@ -67,6 +67,7 @@
     .navbar-nav {
       li.dropdown {
         a {
+
           .fa {
             padding-left: 20px;
           }
@@ -147,7 +148,9 @@
 
           li {
             a {
-              margin-left: 20px;
+              line-height: 30px !important;
+              margin:0 !important;
+              margin-left: 35px !important;
             }
           }
         }
