@@ -6,6 +6,9 @@
   <title>Document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/font-awesome.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
   <link rel="stylesheet" href="css/main.css">
 </head>
 
@@ -36,7 +39,7 @@
                   <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="/">
-            <img class="desktop" src="img/logo.png">
+            <img class="desktop" src="img/logo.svg">
             <img src="img/logo-mobile.png" alt="" class="mobile">
         </a>
       </div>
@@ -54,7 +57,7 @@
             </ul>
           </li>
           <li><a href="#">Hoe werkt het?</a></li>
-          <li class="last-desktop"f><a href="#">Contact</a></li>
+          <li class="last-desktop" f><a href="#">Contact</a></li>
           <li class="mobile-nav"><a href="#">Inloggen</a></li>
           <li class="mobile-nav"><a href="#">Registreren</a></li>
         </ul>
@@ -86,11 +89,11 @@
           </ul>
         </div>
         <div class="col-xs-12 col-sm-6 social-links">
-            <span>Deel deze pagina:</span>
-            <a class='social-item email' href=""><i class="fa fa-fw fa-envelope"></i></a>
-            <a class='social-item google' href=""><i class="fa fa-google-plus"></i></a>
-            <a class='social-item twitter' href=""><i class="fa fa-twitter"></i></a>
-            <a class='social-item facebook' href=""><i class="fa fa-facebook"></i></a>
+          <span>Deel deze pagina:</span>
+          <a class='social-item email' href=""><i class="fa fa-fw fa-envelope"></i></a>
+          <a class='social-item google' href=""><i class="fa fa-google-plus"></i></a>
+          <a class='social-item twitter' href=""><i class="fa fa-twitter"></i></a>
+          <a class='social-item facebook' href=""><i class="fa fa-facebook"></i></a>
         </div>
       </div>
     </div>
@@ -111,14 +114,14 @@
           </div>
           <div class="col-xs-12 col-sm-6">
             <div class="price-big-bg">
-                <h4>Vanaf € 2.125<span>p/week</span></h4>
+              <h4>Vanaf € 2.125<span>p/week</span></h4>
             </div>
           </div>
         </div>
       </div>
     </div>
     <div class="detail-mobile-button">
-      <img class="detail-bg" style="background-image: url(img/detail-bg.png);"  alt="">
+      <img class="detail-bg" style="background-image: url(img/detail-bg.png);" alt="">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
@@ -137,12 +140,16 @@
           <div class="col-xs-12">
             <h1>Geniet van jouw vakantie op <span>Curaçao</span></h1>
             <h2>Huur eenvoudig dit vakantiehuis!</h2>
-            <p>In tegenstelling tot wat algemeen aange&shynomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een professor latijn aan de Hampden-Sydney College in Virginia, heeft één van de meer obscure latijnse woorden, consectetur, uit een Lorem Ipsum passage opgezocht.</p>
-            <ul>
-              <li><img src="img/foto-1.png" alt=""></li>
-              <li><img src="img/foto-2.png" alt=""></li>
-              <li><img src="img/foto-3.png" alt=""></li>
-              <li class="with-num"><img src="img/foto-4.png" alt=""><span>+12</span></li>
+            <p>In tegenstelling tot wat algemeen aange&shynomen wordt is Lorem Ipsum niet zomaar willekeurige tekst. het heeft zijn wortels in een stuk klassieke latijnse literatuur uit 45 v.Chr. en is dus meer dan 2000 jaar oud. Richard McClintock, een
+              professor latijn aan de Hampden-Sydney College in Virginia, heeft één van de meer obscure latijnse woorden, consectetur, uit een Lorem Ipsum passage opgezocht.</p>
+            <ul class="owl-carousel owl-theme" id="owl1">
+              <li class="fancybox" rel="group1" group="fancybox" data-fancybox href="img/f1.jpg"><img src="img/foto-1.png" alt=""></li>
+              <li class="fancybox" rel="group1" group="fancybox" data-fancybox href="img/f2.jpg"><img src="img/foto-2.png" alt=""></li>
+              <li class="fancybox" rel="group1" group="fancybox" data-fancybox href="img/f3.jpg"><img src="img/foto-3.png" alt=""></li>
+              <li class="fancybox with-num" rel="group1" group="fancybox" data-fancybox href="img/f4.jpg" ><img src="img/foto-4.png" alt=""><span>+12</span></li>
+              <li class="fancybox" rel="group1" group="fancybox" data-fancybox href="img/f5.jpg"><img src="img/foto-1.png" alt=""></li>
+              <li class="fancybox" rel="group1" group="fancybox" data-fancybox href="img/f6.jpg"><img src="img/foto-2.png" alt=""></li>
+
             </ul>
           </div>
         </div>
@@ -164,7 +171,7 @@
           </div>
         </div>
       </div>
-        <div id="map"></div>
+      <div id="map"></div>
     </div>
     <div class="bottom-main">
       <div class="container">
@@ -190,14 +197,15 @@
         </div>
       </div>
     </div>
-    <div class="additional-main">
+    <div class="additional-main additional-main-detail">
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-            <h1>Meld je <span>snel</span> en <span>eenvoudig</span> aan</h1>
+
+            <h1>Direct <span>Villa Jan Thiel,</span> Curaçao <span>huren?</span></h1>
             <div class="outlinebtn">
               <a href="">
-                      Gratis registreren<i class="fa fa-gavel" aria-hidden="true"></i>
+                      Vakantiehuis huren!<i class="fa fa-gavel" aria-hidden="true"></i>
                     </a>
             </div>
           </div>
@@ -212,11 +220,11 @@
         <div class="row">
           <div class="col-xs-12">
             <div class="social-block">
-              <a class='social-item' href=""><i class="fa fa-facebook"></i></a>
-              <a class='social-item' href=""><i class="fa fa-linkedin"></i></a>
-              <a class='social-item' href=""><i class="fa fa-twitter"></i></a>
-              <a class='social-item' href=""><i class="fa fa-youtube"></i></a>
-              <a class='social-item' href=""><i class="fa fa-instagram"></i></a>
+              <a class='social-item facebook' href=""><i class="fa fa-facebook"></i></a>
+              <a class='social-item linkedin' href=""><i class="fa fa-linkedin"></i></a>
+              <a class='social-item twitter' href=""><i class="fa fa-twitter"></i></a>
+              <a class='social-item youtube' href=""><i class="fa fa-youtube"></i></a>
+              <a class='social-item instagram' href=""><i class="fa fa-instagram"></i></a>
             </div>
           </div>
         </div>
@@ -283,12 +291,12 @@
                   </ul>
                 </div>
                 <div class="col-xs-12 col-sm-3">
-                  <img src="img/logo-footer.png" alt="">
+                  <img src="img/logo-footer.svg" alt="">
                   <div class="firm-info">
                     <h3>KvK-Nummer: 67398863</h3>
                     <span class="tel"><i class="fa fa-phone"></i>06 - 227 55 260</span>
                     <span class="email"><i class="fa fa-envelope"></i>info@dutchholidayhomes.nl</span>
-                </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -300,46 +308,160 @@
       <div class="container">
         <div class="row">
           <div class="col-xs-12">
-          <div class="row">
-            <div class="col-xs-12 col-sm-4  col-sm-push-4 text-center"><ul>
-              <li><a href="">Privacybeleid</a></li>
-              <li><a href="">Disclaimer</a></li>
-              <li><a href="">Algemene voorwaarden</a></li>
-            </ul></div>
-            <div class="col-xs-12 col-sm-4 col-sm-pull-4"><span>© 2017 - Dutch Holiday Homes B.V.</span></div>
+            <div class="row">
+              <div class="col-xs-12 col-sm-6 col-sm-push-3 text-center">
+                <ul>
+                  <li><a href="">Privacybeleid</a></li>
+                  <li><a href="">Disclaimer</a></li>
+                  <li><a href="">Algemene voorwaarden</a></li>
+                </ul>
+              </div>
+              <div class="col-xs-12 col-sm-3 col-sm-pull-6"><span>© 2017 - Dutch Holiday Homes B.V.</span></div>
 
-            <div class="col-xs-12 col-sm-4 text-right"><a href="">
+              <div class="col-xs-12 col-sm-3 text-right"><a href="">
               Website laten maken
             </a></div>
-          </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </footer>
   <script>
-      var map;
-      function initMap() {
-        map = new google.maps.Map(document.getElementById('map'), {
-          center: {lat: 12.072670, lng: -68.874653},
+    var map;
 
-          zoom: 16,
-          styles:[{"featureType":"administrative.locality","elementType":"all","stylers":[{"hue":"#2c2e33"},{"saturation":7},{"lightness":19},{"visibility":"on"}]},{"featureType":"landscape","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"simplified"}]},{"featureType":"poi","elementType":"all","stylers":[{"hue":"#ffffff"},{"saturation":-100},{"lightness":100},{"visibility":"off"}]},{"featureType":"road","elementType":"geometry","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":31},{"visibility":"on"}]},{"featureType":"road.arterial","elementType":"labels","stylers":[{"hue":"#bbc0c4"},{"saturation":-93},{"lightness":-2},{"visibility":"simplified"}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"hue":"#e9ebed"},{"saturation":-90},{"lightness":-8},{"visibility":"simplified"}]},{"featureType":"transit","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":10},{"lightness":69},{"visibility":"on"}]},{"featureType":"water","elementType":"all","stylers":[{"hue":"#e9ebed"},{"saturation":-78},{"lightness":67},{"visibility":"simplified"}]}]
-        });
-        var marker = new google.maps.Marker({
-          position: new google.maps.LatLng(12.072670, -68.874653),
-          map: map,
-          icon:'img/map-icon.png',
-          title: 'Hello World!'
-        });
-      }
-    </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANaGw7fadfhY9rtdI_KzFyL2CrjwVJxLs&callback=initMap"
-    async defer></script>
+    function initMap() {
+      map = new google.maps.Map(document.getElementById('map'), {
+        center: {
+          lat: 12.072670,
+          lng: -68.874653
+        },
+
+        zoom: 16,
+        styles: [{
+          "featureType": "administrative.locality",
+          "elementType": "all",
+          "stylers": [{
+            "hue": "#2c2e33"
+          }, {
+            "saturation": 7
+          }, {
+            "lightness": 19
+          }, {
+            "visibility": "on"
+          }]
+        }, {
+          "featureType": "landscape",
+          "elementType": "all",
+          "stylers": [{
+            "hue": "#ffffff"
+          }, {
+            "saturation": -100
+          }, {
+            "lightness": 100
+          }, {
+            "visibility": "simplified"
+          }]
+        }, {
+          "featureType": "poi",
+          "elementType": "all",
+          "stylers": [{
+            "hue": "#ffffff"
+          }, {
+            "saturation": -100
+          }, {
+            "lightness": 100
+          }, {
+            "visibility": "off"
+          }]
+        }, {
+          "featureType": "road",
+          "elementType": "geometry",
+          "stylers": [{
+            "hue": "#bbc0c4"
+          }, {
+            "saturation": -93
+          }, {
+            "lightness": 31
+          }, {
+            "visibility": "simplified"
+          }]
+        }, {
+          "featureType": "road",
+          "elementType": "labels",
+          "stylers": [{
+            "hue": "#bbc0c4"
+          }, {
+            "saturation": -93
+          }, {
+            "lightness": 31
+          }, {
+            "visibility": "on"
+          }]
+        }, {
+          "featureType": "road.arterial",
+          "elementType": "labels",
+          "stylers": [{
+            "hue": "#bbc0c4"
+          }, {
+            "saturation": -93
+          }, {
+            "lightness": -2
+          }, {
+            "visibility": "simplified"
+          }]
+        }, {
+          "featureType": "road.local",
+          "elementType": "geometry",
+          "stylers": [{
+            "hue": "#e9ebed"
+          }, {
+            "saturation": -90
+          }, {
+            "lightness": -8
+          }, {
+            "visibility": "simplified"
+          }]
+        }, {
+          "featureType": "transit",
+          "elementType": "all",
+          "stylers": [{
+            "hue": "#e9ebed"
+          }, {
+            "saturation": 10
+          }, {
+            "lightness": 69
+          }, {
+            "visibility": "on"
+          }]
+        }, {
+          "featureType": "water",
+          "elementType": "all",
+          "stylers": [{
+            "hue": "#e9ebed"
+          }, {
+            "saturation": -78
+          }, {
+            "lightness": 67
+          }, {
+            "visibility": "simplified"
+          }]
+        }]
+      });
+      var marker = new google.maps.Marker({
+        position: new google.maps.LatLng(12.072670, -68.874653),
+        map: map,
+        icon: 'img/map-icon.svg',
+        title: 'Hello World!'
+      });
+    }
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyANaGw7fadfhY9rtdI_KzFyL2CrjwVJxLs&callback=initMap" async defer></script>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
   <script src="js/main.js">
-
   </script>
 </body>
 
