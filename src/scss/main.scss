@@ -274,7 +274,7 @@ img.mobile {
         font-weight: 300;
         line-height: 22px;
         letter-spacing: 0.4px;
-
+            transition: all 0.3s linear;
         &:after {
           content: '';
           display: block;
@@ -291,7 +291,7 @@ img.mobile {
 
         &:hover {
           color: #ed7a27;
-
+              transition: all 0.3s linear;
           &:after {
             background-color: #ed7a27;
             visibility: visible;
@@ -2237,10 +2237,11 @@ footer {
           line-height: 36px;
           color: #ffffff;
           letter-spacing: 0.4px;
-
+    transition: all 0.3s linear;
           &:hover {
             text-decoration: none;
             color: #f39d29;
+                transition: all 0.3s linear;
           }
 
           &:before {
