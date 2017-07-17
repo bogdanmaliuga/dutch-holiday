@@ -37,8 +37,9 @@
                   <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="/">
-            <img class="desktop" src="img/logo.svg">
-            <img src="img/logo-mobile.png" alt="" class="mobile">
+          <svg >
+            <image xlink:href="img/logo.svg" src="img/logo.png"  />
+          </svg>
         </a>
       </div>
       <div id="navbar2" class="navbar-collapse collapse">
@@ -524,7 +525,10 @@
                   </ul>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-3">
-                  <img src="img/logo-footer.svg" alt="">
+                  <svg >
+                    <image xlink:href="img/logo-footer.svg" src="img/logo-footer.png"  />
+                  </svg>
+
                   <div class="firm-info">
                     <h3>KvK-Nummer: 67398863</h3>
                     <span class="tel"><i class="fa fa-phone"></i>06 - 227 55 260</span>
@@ -558,6 +562,17 @@
       </div>
     </div>
   </footer>
+  <svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+  <filter id="svgfilter">
+    <feGaussianBlur stdDeviation="2.5" />
+		<!-- comment out feComponentTransfer to remove the darkness -->
+    <feComponentTransfer>
+        <feFuncR type="linear" slope="1"/>
+        <feFuncG type="linear" slope="1"/>
+        <feFuncB type="linear" slope="1"/>
+    </feComponentTransfer>
+  </filter>
+</svg>
   <script src="js/jquery.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>

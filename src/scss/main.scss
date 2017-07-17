@@ -40,6 +40,7 @@ html {
   line-height: $line-height;
   max-height: $line-height * $lines;
 }
+$svgfilter: url("#svgfilter");
 .sort-menu{
 
     top: 60px;
@@ -128,10 +129,15 @@ img.mobile {
   margin-bottom: 0;
 
   .navbar-brand {
-    img {
+    svg{
       width: 370px;
-      max-width: 100%;
+      height: 76px;
+      image{
+        width: 370px;
+        height: 76px;
+      }
     }
+
   }
 
   .menu-show {
@@ -350,6 +356,11 @@ header {
       background-color: #555555;
       opacity: 0.5;
       border-radius: 50px;
+      -webkit-filter: $svgfilter;
+       -moz-filter: $svgfilter;
+       -o-filter: $svgfilter;
+       -ms-filter: $svgfilter;
+       filter: $svgfilter;
     }
 
     h1 {
@@ -375,66 +386,54 @@ header {
       margin-top: 18px;
       letter-spacing: 0.5px;
     }
-
     .outlinebtn {
       display: inline-block;
-      border-radius: 39px;
+      border-radius: 100px;
       vertical-align: middle;
       transition: all 0.3s linear;
       margin: 0 6px;
-      @include linearGradient(#EEEEEE, #FFFFFF);
+      @include linearGradient(#ed7a27, #f39d29);
+
       a {
+        letter-spacing: 0.7px;
         color: #242424;
         font-family: 'Lato';
         font-size: 16px;
         font-weight: 700;
-        max-width: 238px;
         white-space: nowrap;
         overflow: hidden;
         display: block;
+
         position: relative;
         width: 100%;
         height: 100%;
         text-overflow: ellipsis;
-        // background-color: white;
+        background-color: white;
         border: none;
         padding: 28px 30px;
-        border-radius: 39px;
+        border-radius: 100px;
         letter-spacing: 0.7px;
         cursor: pointer;
         -webkit-appearance: none;
         -moz-appearance: none;
         transition: all 0.3s linear;
 
-
         .fa {
           transition: all 0.3s linear;
-          color: #242424;
+        color: #242424;
           margin-left: 9px;
-        }
-      }
-
-      &:last-child {
-        a {
-          max-width: 244px;
-        }
-
-        .fa {
-          font-size: 22px;
         }
       }
 
       &:hover {
         color: #fff;
-        @include linearGradient(#ed7a27, #f39d29);
         transition: all 0.3s linear;
-
+        @include linearGradient(transperent, transperent);
         a {
-
+          transition: all 0.3s linear;
           background: none;
           color: white;
           text-decoration: none;
-          transition: all 0.3s linear;
 
           i {
             color: white;
@@ -443,6 +442,73 @@ header {
         }
       }
     }
+    // .outlinebtn {
+    //   display: inline-block;
+    //   border-radius: 39px;
+    //   vertical-align: middle;
+    //   transition: all 0.3s linear;
+    //   margin: 0 6px;
+    //   @include linearGradient(#EEEEEE, #FFFFFF);
+    //   a {
+    //     color: #242424;
+    //     font-family: 'Lato';
+    //     font-size: 16px;
+    //     font-weight: 700;
+    //     max-width: 238px;
+    //     white-space: nowrap;
+    //     overflow: hidden;
+    //     display: block;
+    //     position: relative;
+    //     width: 100%;
+    //     height: 100%;
+    //     text-overflow: ellipsis;
+    //     // background-color: white;
+    //     border: none;
+    //     padding: 28px 30px;
+    //     border-radius: 39px;
+    //     letter-spacing: 0.7px;
+    //     cursor: pointer;
+    //     -webkit-appearance: none;
+    //     -moz-appearance: none;
+    //     transition: all 0.3s linear;
+    //
+    //
+    //     .fa {
+    //       transition: all 0.3s linear;
+    //       color: #242424;
+    //       margin-left: 9px;
+    //     }
+    //   }
+    //
+    //   &:last-child {
+    //     a {
+    //       max-width: 244px;
+    //     }
+    //
+    //     .fa {
+    //       font-size: 22px;
+    //     }
+    //   }
+    //
+    //   &:hover {
+    //     color: #fff;
+    //     @include linearGradient(#ed7a27, #f39d29);
+    //     transition: all 0.3s linear;
+    //
+    //     a {
+    //
+    //       background: none;
+    //       color: white;
+    //       text-decoration: none;
+    //       transition: all 0.3s linear;
+    //
+    //       i {
+    //         color: white;
+    //         transition: all 0.3s linear;
+    //       }
+    //     }
+    //   }
+    // }
   }
 
   .statistic-info {
@@ -1305,7 +1371,8 @@ main {
             float: left;
             width: 40px;
             border: 1px solid #edf0f5;
-            background-color: rgba(0, 0, 0, 0);
+            // @include linearGradient(#ffffff,#ffffff);
+            background-color: white;
             text-align: center;
             margin-right: 10px;
             transition: all 0.3s linear;
@@ -1325,8 +1392,10 @@ main {
 
             &:hover {
               cursor: pointer;
-              @include linearGradient(#ed7a27,#f39d29);
-              border-color: transparent;
+              background-color: #f49337;
+              // @include linearGradient(#ed7a27,#f39d29);
+
+
               transition: all 0.3s linear;
               a {
                 transition: all 0.3s linear;
@@ -1338,6 +1407,9 @@ main {
           li.current {
             border: 1px solid #edf0f5;
             background-color: #edf0f5;
+            &:hover{
+                background-color: #f49337;
+            }
           }
           li.mobile-nav {
             display: none;
@@ -2068,7 +2140,6 @@ footer {
         }
 
         &:hover {
-          opacity: 0.7;
 
           .fa {
             color: white;
@@ -2160,9 +2231,13 @@ footer {
     margin-top: -5px;
     margin-bottom: 50px;
 
-    img {
-      max-width: 100%;
-      margin-top: 13px;
+    svg{
+      width: 270px;
+      height: 55px;
+      image{
+        width: 270px;
+        height: 55px;
+      }
     }
 
     .firm-info {

@@ -65,9 +65,13 @@
     }
 
     .navbar-brand {
-      img {
-        width: auto;
-        max-width: 100%;
+      svg{
+        width: 226px;
+        height: 48px;
+        image{
+          width: 226px;
+          height: 48px;
+        }
       }
     }
 
@@ -1088,7 +1092,14 @@
       border: 0;
       padding-top: 41px;
       padding-bottom: 41px;
-
+      svg{
+        width: 266px;
+        height: 55px;
+        image{
+          width: 266px;
+          height: 54px;
+        }
+      }
       .firm-info {
         margin-top: 7px;
         margin-left: 12px;
