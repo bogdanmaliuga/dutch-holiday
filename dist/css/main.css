@@ -5823,9 +5823,9 @@ button.close {
     display: none !important; } }
 
 .sort-menu {
-  top: 60px;
+  top: 50px;
   border-radius: 0;
-  left: 15px; }
+  left: 0px; }
   .sort-menu a {
     font-size: 12px;
     font-family: 'Lato';
@@ -6604,6 +6604,8 @@ main .search-block {
     margin: 0;
     padding: 0;
     overflow: hidden; }
+  main .search-block .filter-container .search-contrainer {
+    position: relative; }
   main .search-block .filter-container div.zoen {
     padding-bottom: 238px;
     margin-top: 30px;
@@ -6619,6 +6621,8 @@ main .search-block {
       font-weight: 300; }
     main .search-block .filter-container div.zoen ul.zoen-item {
       margin-bottom: 13px; }
+      main .search-block .filter-container div.zoen ul.zoen-item .zoen-container {
+        visibility: visible; }
       main .search-block .filter-container div.zoen ul.zoen-item h5.zoen-title.line-up:after {
         -moz-transition: all 0.3s linear;
         -webkit-transition: all 0.3s linear;
@@ -7648,6 +7652,10 @@ footer {
           line-height: 15px;
           color: #6c9ebe; }
 
+@media (min-width: 1200px) {
+  .col-lg-3.text-center {
+    text-align: right; } }
+
 @media (max-width: 1024px) {
   img.desktop {
     display: none; }
@@ -8394,9 +8402,9 @@ footer {
     border-top: 1px solid #0e68a3;
     margin-top: 47px; }
   footer .bottom-footer {
-    padding-top: 43px;
+    padding-top: 30px;
     text-align: center;
-    padding-bottom: 54px; }
+    padding-bottom: 30px; }
     footer .bottom-footer .col-xs-12.text-right {
       text-align: center; }
     footer .bottom-footer span {
@@ -8515,3 +8523,10 @@ footer {
     padding-right: 10px; }
   .navbar-collapse {
     margin-left: 0 !important; } }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+  .navbar-default .navbar-brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -114.5px !important;
+    display: block; } }

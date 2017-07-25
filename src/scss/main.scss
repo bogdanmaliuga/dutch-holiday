@@ -43,9 +43,9 @@ html {
 $svgfilter: url(  "#svgfilter");
 
 .sort-menu {
-    top: 60px;
+    top: 50px;
     border-radius: 0;
-    left: 15px;
+    left: 0px;
 
     a {
         font-size: 12px;
@@ -1078,7 +1078,9 @@ main {
                 padding: 0;
                 overflow: hidden;
             }
-
+            .search-contrainer{
+              position: relative;
+            }
             div.zoen {
                 padding-bottom: 238px;
                 margin-top: 30px;
@@ -1097,7 +1099,10 @@ main {
 
                 ul.zoen-item {
                     margin-bottom: 13px;
+                    .zoen-container{
 
+                      visibility: visible;
+                    }
                     h5.zoen-title.line-up {
                         &:after {
                             // content: "\f106";
