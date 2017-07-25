@@ -8502,6 +8502,11 @@ footer {
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: landscape) {
   .footer-links-container .col-sm-6 {
     min-height: 302px; }
+  .navbar-default .navbar-brand {
+    position: absolute;
+    left: 50%;
+    margin-left: -114.5px !important;
+    display: block; }
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -8524,9 +8529,11 @@ footer {
   .navbar-collapse {
     margin-left: 0 !important; } }
 
-@media only screen and (min-device-width: 375px) and (max-device-width: 736px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: landscape) {
+@media (min-width: 321px) and (max-width: 1024px) {
   .navbar-default .navbar-brand {
     position: absolute;
     left: 50%;
-    margin-left: -114.5px !important;
-    display: block; } }
+    margin-left: -113px !important;
+    display: block; }
+  .navbar-default .navbar-nav li.dropdown.open ul.dropdown-menu li a {
+    border-bottom: none; } }
