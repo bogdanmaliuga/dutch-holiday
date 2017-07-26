@@ -8475,6 +8475,8 @@ footer {
         letter-spacing: 1px; } }
 
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) {
+  footer .footer-links-container .firm-info h3 {
+    margin-top: 47px; }
   .social-bread ul {
     padding-left: 0; }
   .navbar .navbar-header {
